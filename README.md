@@ -26,6 +26,23 @@ python -m pytest tests/test_schema.py
 2. Copier frontend/.env.example en frontend/.env.local
 3. Depuis la racine : docker compose up --build
 
+## Données de démonstration (fictives)
+cd backend
+python -m scripts.seed          # idempotent, relançable sans doublons
+
+Comptes de démo (développement uniquement) :
+| Email | Rôle |
+|---|---|
+| responsable.iit@smartcampus.local | responsable IIT |
+| responsable.isb@smartcampus.local | responsable ISB |
+| candidat.demo@smartcampus.local | candidat |
+
+Mot de passe par défaut : voir DEFAULT_DEMO_PASSWORD dans backend/scripts/seed.py.
+Pour le changer (PowerShell) : $env:SEED_DEMO_PASSWORD="votre_valeur"; python -m scripts.seed
+
+Cas de test inclus : le Master ISB est en `brouillon` et un tarif ISB 2025-2026 est expiré,
+pour vérifier que les API ne servent que les informations publiées et valides.
+
 ## Lancement sans Docker
 Backend :
   cd backend
