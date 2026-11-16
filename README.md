@@ -13,6 +13,14 @@ Plateforme agentique d'orientation universitaire (IIT / ISB).
 - database/ : schéma et migrations
 - docs/ : architecture et documentation
 
+## Base de données et Migrations
+Pour initialiser la base de données et appliquer toutes les migrations (les 22 tables) :
+```bash
+docker compose up -d
+cd backend
+python -m alembic upgrade head      # Crée et applique les 22 tables + alembic_version
+python -m pytest tests/test_schema.py
+
 ## Lancement avec Docker (recommandé)
 1. Copier backend/.env.example en backend/.env
 2. Copier frontend/.env.example en frontend/.env.local
