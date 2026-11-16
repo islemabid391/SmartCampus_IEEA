@@ -1,0 +1,169 @@
+{
+  "etablissements": [
+    {"code": "IIT", "nom": "Institut International de Technologie", "description": "Données de démonstration (fictives)."},
+    {"code": "ISB", "nom": "ISB", "description": "Données de démonstration (fictives)."}
+  ],
+  "formations": [
+    {
+      "etablissement": "IIT", "code": "IIT-LIC-INFO", "nom": "Licence en Informatique", "cycle": "licence",
+      "duree_annees": 3, "modalites": "Présentiel", "langue": "Français",
+      "description": "Formation généraliste en informatique couvrant programmation, bases de données, réseaux et développement web.",
+      "debouches": "Développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master.",
+      "statut_publication": "publie",
+      "specialites": [
+        {"nom": "Développement des Systèmes d'Information", "description": "Conception et développement d'applications."},
+        {"nom": "Réseaux et Systèmes", "description": "Administration des réseaux et des systèmes."}
+      ],
+      "programmes": [
+        {"nom": "Licence 1 - Tronc commun", "annee_niveau": 1, "matieres": [
+          {"code": "MATH1", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "ALGO", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "PYTHON", "semestre": 1, "credits": 5, "coefficient": 1.5},
+          {"code": "ANG", "semestre": 2, "credits": 3, "coefficient": 1}]},
+        {"nom": "Licence 2 - Tronc commun", "annee_niveau": 2, "matieres": [
+          {"code": "POO", "semestre": 1, "credits": 5, "coefficient": 2},
+          {"code": "BD", "semestre": 1, "credits": 5, "coefficient": 2},
+          {"code": "RES", "semestre": 2, "credits": 5, "coefficient": 1.5},
+          {"code": "WEB", "semestre": 2, "credits": 5, "coefficient": 1.5}]},
+        {"nom": "Licence 3 - Systèmes d'Information", "annee_niveau": 3, "specialite": "Développement des Systèmes d'Information", "matieres": [
+          {"code": "GL", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "WEB", "semestre": 1, "credits": 5, "coefficient": 1.5},
+          {"code": "STAT", "semestre": 2, "credits": 4, "coefficient": 1}]},
+        {"nom": "Licence 3 - Réseaux et Systèmes", "annee_niveau": 3, "specialite": "Réseaux et Systèmes", "matieres": [
+          {"code": "RES", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "GL", "semestre": 1, "credits": 5, "coefficient": 1.5},
+          {"code": "STAT", "semestre": 2, "credits": 4, "coefficient": 1}]}
+      ],
+      "conditions": [
+        {"type": "diplome", "description": "Baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique)", "niveau_requis": "Baccalauréat"},
+        {"type": "moyenne", "description": "Moyenne générale minimale au baccalauréat", "niveau_requis": "Baccalauréat", "valeur_min": 10},
+        {"type": "dossier", "description": "Étude du dossier scolaire et entretien de motivation"}
+      ],
+      "tarifs": [
+        {"frais_scolarite": 4800, "modalites_paiement": "3 tranches : inscription, janvier, avril", "statut_publication": "publie", "valide_du": "2026-09-01", "valide_au": "2027-08-31"}
+      ],
+      "passerelles": [
+        {"formation_cible": "Cycle ingénieur en informatique", "conditions": "Licence validée avec une moyenne d'au moins 12 et entretien de validation"}
+      ]
+    },
+    {
+      "etablissement": "IIT", "code": "IIT-PREPA", "nom": "Cycle préparatoire intégré", "cycle": "prepa",
+      "duree_annees": 2, "modalites": "Présentiel", "langue": "Français",
+      "description": "Deux années de mathématiques, physique et informatique préparant à l'accès au cycle ingénieur.",
+      "debouches": "Accès au cycle ingénieur de l'IIT.",
+      "statut_publication": "publie",
+      "programmes": [
+        {"nom": "Préparatoire - 1ère année", "annee_niveau": 1, "matieres": [
+          {"code": "MATH1", "semestre": 1, "credits": 8, "coefficient": 3},
+          {"code": "PHYS", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "ALGO", "semestre": 2, "credits": 5, "coefficient": 2},
+          {"code": "ANG", "semestre": 2, "credits": 3, "coefficient": 1}]},
+        {"nom": "Préparatoire - 2ème année", "annee_niveau": 2, "matieres": [
+          {"code": "MATH2", "semestre": 1, "credits": 8, "coefficient": 3},
+          {"code": "PHYS", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "PYTHON", "semestre": 2, "credits": 5, "coefficient": 2},
+          {"code": "STAT", "semestre": 2, "credits": 4, "coefficient": 1.5}]}
+      ],
+      "conditions": [
+        {"type": "diplome", "description": "Baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques)", "niveau_requis": "Baccalauréat"},
+        {"type": "moyenne", "description": "Moyenne générale minimale au baccalauréat", "niveau_requis": "Baccalauréat", "valeur_min": 12}
+      ],
+      "tarifs": [
+        {"frais_scolarite": 5200, "modalites_paiement": "3 tranches annuelles", "statut_publication": "publie", "valide_du": "2026-09-01", "valide_au": "2027-08-31"}
+      ],
+      "passerelles": [
+        {"formation_cible": "Cycle ingénieur en informatique", "conditions": "Réussite des deux années du cycle préparatoire et classement"}
+      ]
+    },
+    {
+      "etablissement": "IIT", "code": "IIT-ING-INFO", "nom": "Cycle ingénieur en informatique", "cycle": "ingenieur",
+      "duree_annees": 3, "modalites": "Présentiel", "langue": "Français",
+      "description": "Formation d'ingénieur en informatique avec spécialisation en dernière année.",
+      "debouches": "Ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
+      "statut_publication": "publie",
+      "specialites": [
+        {"nom": "Génie Logiciel et Informatique Décisionnelle (GLID)", "description": "Développement logiciel, données et aide à la décision."},
+        {"nom": "Réseaux et Cybersécurité", "description": "Architecture réseau et sécurité des systèmes."}
+      ],
+      "programmes": [
+        {"nom": "Ingénieur - 1ère année", "annee_niveau": 1, "matieres": [
+          {"code": "MATH2", "semestre": 1, "credits": 5, "coefficient": 2},
+          {"code": "ALGO", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "BD", "semestre": 2, "credits": 5, "coefficient": 2},
+          {"code": "GL", "semestre": 2, "credits": 5, "coefficient": 2}]},
+        {"nom": "Ingénieur - 2ème année", "annee_niveau": 2, "matieres": [
+          {"code": "RES", "semestre": 1, "credits": 5, "coefficient": 2},
+          {"code": "WEB", "semestre": 1, "credits": 5, "coefficient": 1.5},
+          {"code": "STAT", "semestre": 2, "credits": 5, "coefficient": 2},
+          {"code": "ML", "semestre": 2, "credits": 5, "coefficient": 2}]},
+        {"nom": "Ingénieur - 3ème année GLID", "annee_niveau": 3, "specialite": "Génie Logiciel et Informatique Décisionnelle (GLID)", "matieres": [
+          {"code": "ML", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "BI", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "GL", "semestre": 2, "credits": 5, "coefficient": 1.5}]},
+        {"nom": "Ingénieur - 3ème année Réseaux et Cybersécurité", "annee_niveau": 3, "specialite": "Réseaux et Cybersécurité", "matieres": [
+          {"code": "RES", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "GL", "semestre": 2, "credits": 5, "coefficient": 1.5}]}
+      ],
+      "conditions": [
+        {"type": "diplome", "description": "Licence en informatique ou réussite du cycle préparatoire", "niveau_requis": "Bac+3 ou Bac+2 prépa"},
+        {"type": "concours", "description": "Concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine"}
+      ],
+      "tarifs": [
+        {"frais_scolarite": 6500, "modalites_paiement": "4 tranches annuelles", "statut_publication": "publie", "valide_du": "2026-09-01", "valide_au": "2027-08-31"}
+      ]
+    },
+    {
+      "etablissement": "ISB", "code": "ISB-LIC-BUS", "nom": "Licence en Business et Management", "cycle": "licence",
+      "duree_annees": 3, "modalites": "Présentiel", "langue": "Français",
+      "description": "Formation généraliste en gestion, économie et marketing.",
+      "debouches": "Assistant de gestion, chargé marketing, poursuite en master.",
+      "statut_publication": "publie",
+      "specialites": [
+        {"nom": "Marketing", "description": "Stratégie et marketing digital."},
+        {"nom": "Finance", "description": "Comptabilité et gestion financière."}
+      ],
+      "programmes": [
+        {"nom": "Licence 1 - Tronc commun", "annee_niveau": 1, "matieres": [
+          {"code": "ECO", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "COMPTA", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "MGT", "semestre": 2, "credits": 5, "coefficient": 1.5},
+          {"code": "ANG", "semestre": 2, "credits": 3, "coefficient": 1}]},
+        {"nom": "Licence 2 - Tronc commun", "annee_niveau": 2, "matieres": [
+          {"code": "MGT", "semestre": 1, "credits": 5, "coefficient": 2},
+          {"code": "MKT", "semestre": 1, "credits": 5, "coefficient": 2},
+          {"code": "STAT", "semestre": 2, "credits": 4, "coefficient": 1.5}]},
+        {"nom": "Licence 3 - Marketing", "annee_niveau": 3, "specialite": "Marketing", "matieres": [
+          {"code": "MKT", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "MGT", "semestre": 2, "credits": 5, "coefficient": 1.5},
+          {"code": "ANG", "semestre": 2, "credits": 3, "coefficient": 1}]}
+      ],
+      "conditions": [
+        {"type": "diplome", "description": "Baccalauréat, toutes sections", "niveau_requis": "Baccalauréat"},
+        {"type": "dossier", "description": "Étude du dossier scolaire"}
+      ],
+      "tarifs": [
+        {"frais_scolarite": 4200, "modalites_paiement": "3 tranches annuelles", "statut_publication": "publie", "valide_du": "2026-09-01", "valide_au": "2027-08-31"},
+        {"frais_scolarite": 3900, "modalites_paiement": "3 tranches annuelles", "statut_publication": "publie", "valide_du": "2025-09-01", "valide_au": "2026-08-31"}
+      ]
+    },
+    {
+      "etablissement": "ISB", "code": "ISB-MAS-MKT", "nom": "Master en Marketing digital", "cycle": "autre",
+      "duree_annees": 2, "modalites": "Présentiel", "langue": "Français",
+      "description": "Master professionnel en cours de préparation (non publié).",
+      "debouches": "Responsable marketing digital, chef de projet e-commerce.",
+      "statut_publication": "brouillon",
+      "programmes": [
+        {"nom": "Master 1 - Marketing digital", "annee_niveau": 1, "matieres": [
+          {"code": "MKT", "semestre": 1, "credits": 8, "coefficient": 3},
+          {"code": "STAT", "semestre": 1, "credits": 6, "coefficient": 2},
+          {"code": "ANG", "semestre": 2, "credits": 4, "coefficient": 1}]}
+      ],
+      "conditions": [
+        {"type": "diplome", "description": "Licence en gestion, marketing ou équivalent", "niveau_requis": "Bac+3", "statut_publication": "brouillon"}
+      ],
+      "tarifs": [
+        {"frais_scolarite": 7000, "modalites_paiement": "4 tranches annuelles", "statut_publication": "brouillon", "valide_du": "2026-09-01", "valide_au": "2027-08-31"}
+      ]
+    }
+  ]
+}
