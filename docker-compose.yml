@@ -4,7 +4,7 @@ services:
     ports:
       - "8000:8000"
     env_file:
-      - ./backend/.env
+      - ./.env
     volumes:
       - ./backend:/app
 
@@ -25,17 +25,17 @@ services:
   # Le service PostgreSQL sera ajouté ici par la personne qui fait SA-15
   db:
     image: postgres:16
-    container_name: smartcampus_db
+    container_name: smartcampus
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_ADMIN_USER}
       POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD}
-      POSTGRES_DB: postgres
-      APP_DB_NAME: ${APP_DB_NAME}
+      POSTGRES_DB: smartcampus
+      APP_DB_NAME: smartcampus
       APP_DB_USER: ${APP_DB_USER}
       APP_DB_PASSWORD: ${APP_DB_PASSWORD}
     ports:
-      - "5432:5432"
+      - "${DB_PORT:-5432}:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./backend/db/init:/docker-entrypoint-initdb.d:ro
