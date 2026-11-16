@@ -1,0 +1,20 @@
+[
+  {"code": "MATH1", "nom": "Mathématiques 1", "description": "Analyse et algèbre de base"},
+  {"code": "MATH2", "nom": "Mathématiques 2", "description": "Algèbre linéaire et analyse avancée"},
+  {"code": "PHYS", "nom": "Physique", "description": "Mécanique et électricité"},
+  {"code": "ALGO", "nom": "Algorithmique et structures de données", "description": "Complexité, listes, arbres, graphes"},
+  {"code": "PYTHON", "nom": "Programmation Python", "description": "Bases de la programmation et bibliothèques usuelles"},
+  {"code": "POO", "nom": "Programmation orientée objet", "description": "Classes, héritage, design patterns"},
+  {"code": "BD", "nom": "Bases de données", "description": "Modélisation relationnelle et SQL"},
+  {"code": "RES", "nom": "Réseaux informatiques", "description": "Modèles OSI et TCP/IP, routage, sécurité de base"},
+  {"code": "WEB", "nom": "Développement web", "description": "Frontend, backend et API"},
+  {"code": "GL", "nom": "Génie logiciel", "description": "Cycle de vie, UML, méthodes agiles, tests"},
+  {"code": "STAT", "nom": "Probabilités et statistiques", "description": "Variables aléatoires, estimation, tests"},
+  {"code": "ML", "nom": "Machine learning", "description": "Apprentissage supervisé et non supervisé"},
+  {"code": "BI", "nom": "Informatique décisionnelle", "description": "Entrepôts de données, ETL, tableaux de bord"},
+  {"code": "ANG", "nom": "Anglais technique", "description": "Communication professionnelle en anglais"},
+  {"code": "ECO", "nom": "Économie générale", "description": "Micro et macroéconomie"},
+  {"code": "COMPTA", "nom": "Comptabilité", "description": "Comptabilité générale et analytique"},
+  {"code": "MKT", "nom": "Marketing", "description": "Études de marché, stratégie, marketing digital"},
+  {"code": "MGT", "nom": "Management", "description": "Organisation, gestion d'équipe, stratégie"}
+]

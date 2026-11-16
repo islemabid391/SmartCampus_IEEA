@@ -1,0 +1,5 @@
+[
+  {"email": "responsable.iit@smartcampus.local", "role": "responsable", "etablissement": "IIT", "nom": "Démo", "prenom": "Responsable IIT", "telephone": null, "consentement_rgpd": false},
+  {"email": "responsable.isb@smartcampus.local", "role": "responsable", "etablissement": "ISB", "nom": "Démo", "prenom": "Responsable ISB", "telephone": null, "consentement_rgpd": false},
+  {"email": "candidat.demo@smartcampus.local", "role": "candidat", "etablissement": null, "nom": "Démo", "prenom": "Candidat", "telephone": null, "consentement_rgpd": true}
+]
