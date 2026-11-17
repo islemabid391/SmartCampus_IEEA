@@ -1,21 +1,30 @@
+
 fastapi[standard]
 pydantic-settings
 pytest
-
 sqlalchemy>=2.0
 psycopg[binary]
-pydantic-settings
-
-pip freeze | grep -i alembic
-
 bcrypt==5.0.0
-"""
-    Hache un mot de passe en utilisant bcrypt.
+
+
+# fastapi[standard]
+# pydantic-settings
+# pytest
+
+# sqlalchemy>=2.0
+# psycopg[binary]
+# pydantic-settings
+
+# pip freeze | grep -i alembic
+
+# bcrypt==5.0.0
+# """
+#     Hache un mot de passe en utilisant bcrypt.
     
-    Remarque d'architecture (Coordination SA-28 / Authentification) :
-    - On utilise 'bcrypt' directement (version figée dans requirements.txt) 
-      car 'passlib' n'est plus maintenu et pose des problèmes de compatibilité 
-      avec les versions récentes de Python (Python 3.12+ / 3.14).
-    - À coordonner avec l'équipe (SA-28) pour s'assurer que le module de vérification 
-      de l'authentification utilise la même méthode de hachage pour les comptes de démo.
-"""
+#     Remarque d'architecture (Coordination SA-28 / Authentification) :
+#     - On utilise 'bcrypt' directement (version figée dans requirements.txt) 
+#       car 'passlib' n'est plus maintenu et pose des problèmes de compatibilité 
+#       avec les versions récentes de Python (Python 3.12+ / 3.14).
+#     - À coordonner avec l'équipe (SA-28) pour s'assurer que le module de vérification 
+#       de l'authentification utilise la même méthode de hachage pour les comptes de démo.
+# """
