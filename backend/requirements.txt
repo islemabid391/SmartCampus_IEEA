@@ -1,10 +1,21 @@
 
 fastapi[standard]
-pydantic-settings
+pydantic>=2.9,<3.0
+pydantic-settings>=2.16.3,<3.0
 pytest
-sqlalchemy>=2.0
-psycopg[binary]
+SQLAlchemy>=2.0,<3.0
+psycopg[binary]>=3.2,<4.0
 bcrypt==5.0.0
+alembic>=1.13,<2.0
+
+
+
+# fastapi[standard]
+# pydantic-settings
+# pytest
+# sqlalchemy>=2.0
+# psycopg[binary]
+# bcrypt==5.0.0
 
 
 # fastapi[standard]
