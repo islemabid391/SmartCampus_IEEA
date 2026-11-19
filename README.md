@@ -78,3 +78,35 @@ Frontend :
 - Commits : "SA-X: description"
 - Toujours une Pull Request, jamais de push direct sur main
 - Ne jamais commiter .env, .venv ou node_modules
+
+## Sessions visiteurs (conversation sans compte)
+
+Un visiteur peut discuter sans créer de compte : une session temporaire est créée automatiquement.
+
+| Réglage (`backend/.env`) | Défaut | Rôle |
+|---|---|---|
+| `SESSION_TTL_MINUTES` | 120 | durée de validité d'une session |
+| `SESSION_MAX_MESSAGES` | 50 | messages visiteur max par session |
+| `SESSION_MAX_CONVERSATIONS` | 3 | conversations max par session |
+
+Endpoints :
+| Méthode | Route | Rôle |
+|---|---|---|
+| POST | `/api/v1/sessions` | crée une session et renvoie le token (affiché une seule fois) |
+| GET | `/api/v1/sessions/me` | état de la session : temps, messages et conversations restants |
+| DELETE | `/api/v1/sessions/me` | termine la session |
+
+Le token est envoyé dans l'en-tête `X-Session-Token`. Seul son hash SHA-256 est stocké en base.
+Pour protéger une route : `session = Depends(get_current_session)` (401 si absente ou expirée).
+Pour limiter l'usage : `verifier_quota_messages(db, session)` ou `verifier_quota_conversations(db, session)` (429 si la limite est atteinte), dans `app/services/quota_service.py`.
+
+Expiration : une session dépassée passe à `expiree` dès sa prochaine utilisation. La purge supprime
+les sessions expirées depuis plus de 7 jours avec leurs conversations et messages :
+
+    cd backend
+    python -m scripts.purge_sessions     # à planifier régulièrement
+
+Frontend : `frontend/src/lib/session.ts` (`ensureSession`, `sessionFetch`, `endSession`) crée,
+réutilise et renouvelle la session ; le token est gardé dans le `localStorage` du navigateur.
+
+Tests : `python -m pytest tests/test_session_service.py tests/test_session_deps.py tests/test_sessions_api.py tests/test_quota_service.py tests/test_session_purge.py`
