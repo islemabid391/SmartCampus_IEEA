@@ -72,6 +72,8 @@ class Conversation(Base):
     langue_detectee: Mapped[str | None] = mapped_column(String(20))
     date_creation: Mapped[datetime] = mapped_column(TZ, server_default=func.now())
     date_cloture: Mapped[datetime | None] = mapped_column(TZ)
+    # Informations utiles retenues sur le visiteur (niveau, intérêts, objectif...)
+    memoire: Mapped[dict | None] = mapped_column(JSONB)
 
 
 class Message(Base):

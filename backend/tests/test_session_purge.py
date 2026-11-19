@@ -46,3 +46,31 @@ def test_purge_supprime_les_anciennes_et_leurs_conversations(db_session):
         select(Conversation.id).where(Conversation.session_id == ancienne)
     )
     assert restantes is None  # conversation supprimée en cascade
+
+def test_purge_supprime_les_messages_expires_mais_garde_les_valides(db_session):
+    from app.models.utilisateur import Message
+
+    session_id = _session(db_session, "active", timedelta(hours=1))
+    conversation = Conversation(session_id=session_id)
+    db_session.add(conversation)
+    db_session.flush()
+    maintenant = datetime.now(timezone.utc)
+    expire = Message(
+        conversation_id=conversation.id, role="user", contenu="expiré",
+        date_expiration=maintenant - timedelta(minutes=1),
+    )
+    valide = Message(
+        conversation_id=conversation.id, role="user", contenu="valide",
+        date_expiration=maintenant + timedelta(minutes=30),
+    )
+    db_session.add_all([expire, valide])
+    db_session.commit()
+    expire_id, valide_id = expire.id, valide.id
+
+    resultat = purger_sessions_expirees(db_session)
+
+    assert resultat["messages_supprimes"] >= 1
+    db_session.expunge_all()
+    assert db_session.get(Message, expire_id) is None
+    assert db_session.get(Message, valide_id) is not None
+    assert _statut(db_session, session_id) == "active"  # la session, elle, reste active
