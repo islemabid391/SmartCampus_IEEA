@@ -6,6 +6,7 @@ from app.api.v1.endpoints import (
     tarifs,
     conditions_admission,
     sessions,
+    conversations,
 )
 
 
@@ -31,7 +32,7 @@ api_router.include_router(
 # from fastapi import APIRouter
 
 # from app.api.v1.endpoints import health
-# # Pour ajouter un module : crÃ©er un fichier dans endpoints/,
+# # Pour ajouter un module : crÃƒÂ©er un fichier dans endpoints/,
 # # l'importer ici, puis ajouter une ligne include_router.
 
 # api_router = APIRouter()
@@ -39,3 +40,6 @@ api_router.include_router(
 
 # Sessions visiteurs (conversation sans compte)
 api_router.include_router(sessions.router)
+
+# Conversations et mémoire temporaire
+api_router.include_router(conversations.router)
