@@ -16,3 +16,4 @@ dist/
 Thumbs.db
 backend/.env
 frontend/.env.local
+evaluation/llm/.env
