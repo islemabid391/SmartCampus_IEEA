@@ -1,0 +1,106 @@
+# parametres:
+#   temperature: 0.2
+#   max_tokens: 500
+#   timeout_secondes: 60
+#   passes: 3
+#   max_retries: 3
+
+# ponderation_score:
+#   qualite: 0.50
+#   latence: 0.20
+#   cout: 0.20
+#   erreurs: 0.10
+
+# prompt_systeme: |
+#   Tu es l'assistant officiel d'orientation universitaire de SmartCampus AI (groupement NAU : IIT, ISA, ISB).
+#   Réponds en français clair, précis et poli en t'appuyant uniquement sur le contexte officiel fourni.
+#   Règles strictes :
+#   1. Si le contexte est absent ou ne contient pas l'information demandée, n'invente jamais de réponse : indique honnêtement que l'information officielle n'est pas disponible.
+#   2. Si la question de l'étudiant est trop vague ou incomplète (filière, niveau ou établissement manquant), demande-lui de préciser sa demande.
+#   3. Ne cite jamais d'informations ou de tarifs périmés.
+
+# modeles:
+#   - id: "llama-3.1-8b-instant"
+#     nom_affiche: "Llama 3.1 8B (Groq - Rapide)"
+#     fournisseur: "Groq"
+#     type: "open_source"
+#     base_url: "https://api.groq.com/openai/v1"
+#     api_key_env: "GROQ_API_KEY"
+#     prix_entree_1m: 0.05
+#     prix_sortie_1m: 0.08
+#     prix_verifies_le: "2026-11-20"
+
+#   - id: "llama-3.3-70b-versatile"
+#     nom_affiche: "Llama 3.3 70B (Groq - Grand)"
+#     fournisseur: "Groq"
+#     type: "open_source"
+#     base_url: "https://api.groq.com/openai/v1"
+#     api_key_env: "GROQ_API_KEY"
+#     prix_entree_1m: 0.59
+#     prix_sortie_1m: 0.79
+#     prix_verifies_le: "2026-11-20"
+
+#   - id: "mistral"
+#     nom_affiche: "Mistral 7B (Ollama Local)"
+#     fournisseur: "Ollama (Local)"
+#     type: "open_source_local"
+#     base_url: "http://localhost:11434/v1"
+#     api_key_env: "OLLAMA_API_KEY"
+#     prix_entree_1m: 0.0
+#     prix_sortie_1m: 0.0
+#     prix_verifies_le: "2026-11-20"
+
+
+
+
+parametres:
+  temperature: 0.2
+  max_tokens: 500
+  timeout_secondes: 60
+  passes: 3
+  max_retries: 3
+
+ponderation_score:
+  qualite: 0.50
+  latence: 0.20
+  cout: 0.20
+  erreurs: 0.10
+
+prompt_systeme: |
+  Tu es l'assistant officiel d'orientation universitaire de SmartCampus AI (groupement NAU : IIT, ISA, ISB).
+  Réponds en français clair, précis et poli en t'appuyant uniquement sur le contexte officiel fourni.
+  Règles strictes :
+  1. Si le contexte est absent ou ne contient pas l'information demandée, n'invente jamais de réponse : indique honnêtement que l'information officielle n'est pas disponible.
+  2. Si la question de l'étudiant est trop vague ou incomplète (filière, niveau ou établissement manquant), demande-lui de préciser sa demande.
+  3. Ne cite jamais d'informations ou de tarifs périmés.
+
+modeles:
+  - id: "openai/gpt-oss-20b"
+    nom_affiche: "GPT-OSS 20B (Groq - Petit)"
+    fournisseur: "Groq"
+    type: "open_source"
+    base_url: "https://api.groq.com/openai/v1"
+    api_key_env: "GROQ_API_KEY"
+    prix_entree_1m: 0.075
+    prix_sortie_1m: 0.30
+    prix_verifies_le: "2026-11-20"
+
+  - id: "openai/gpt-oss-120b"
+    nom_affiche: "GPT-OSS 120B (Groq - Grand)"
+    fournisseur: "Groq"
+    type: "open_source"
+    base_url: "https://api.groq.com/openai/v1"
+    api_key_env: "GROQ_API_KEY"
+    prix_entree_1m: 0.15
+    prix_sortie_1m: 0.60
+    prix_verifies_le: "2026-11-20"
+
+  - id: "mistral"
+    nom_affiche: "Mistral 7B (Ollama Local)"
+    fournisseur: "Ollama (Local)"
+    type: "open_source_local"
+    base_url: "http://localhost:11434/v1"
+    api_key_env: "OLLAMA_API_KEY"
+    prix_entree_1m: 0.0
+    prix_sortie_1m: 0.0
+    prix_verifies_le: "2026-11-20"

@@ -1,0 +1,48 @@
+{
+  "date_utc": "20261120_013426",
+  "empreinte_questions": "a5b73103238ae77e",
+  "nb_questions": 40,
+  "passes": 3,
+  "parametres": {
+    "temperature": 0.2,
+    "max_tokens": 500,
+    "timeout_secondes": 60,
+    "passes": 3,
+    "max_retries": 3
+  },
+  "modeles": [
+    {
+      "id": "openai/gpt-oss-20b",
+      "nom_affiche": "GPT-OSS 20B (Groq - Petit)",
+      "fournisseur": "Groq",
+      "type": "open_source",
+      "base_url": "https://api.groq.com/openai/v1",
+      "api_key_env": "GROQ_API_KEY",
+      "prix_entree_1m": 0.075,
+      "prix_sortie_1m": 0.3,
+      "prix_verifies_le": "2026-11-20"
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "nom_affiche": "GPT-OSS 120B (Groq - Grand)",
+      "fournisseur": "Groq",
+      "type": "open_source",
+      "base_url": "https://api.groq.com/openai/v1",
+      "api_key_env": "GROQ_API_KEY",
+      "prix_entree_1m": 0.15,
+      "prix_sortie_1m": 0.6,
+      "prix_verifies_le": "2026-11-20"
+    },
+    {
+      "id": "mistral",
+      "nom_affiche": "Mistral 7B (Ollama Local)",
+      "fournisseur": "Ollama (Local)",
+      "type": "open_source_local",
+      "base_url": "http://localhost:11434/v1",
+      "api_key_env": "OLLAMA_API_KEY",
+      "prix_entree_1m": 0.0,
+      "prix_sortie_1m": 0.0,
+      "prix_verifies_le": "2026-11-20"
+    }
+  ]
+}

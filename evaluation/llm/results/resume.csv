@@ -1,0 +1,4 @@
+﻿modele_id;nom;nb_req;taux_erreurs;reprises;lat_med_ms;lat_p95_ms;cout_1000_usd;ratio_cles_pct;fausses_infos;coherence_ref_pct;note_humaine_2;score_global
+openai/gpt-oss-20b;GPT-OSS 20B (Groq - Petit);120;24.2;0;1504.0;5751.8;0.1142;75.0;0;66.7;1.73;81.1
+openai/gpt-oss-120b;GPT-OSS 120B (Groq - Grand);120;23.3;0;1216.0;6009.8;0.2303;72.1;0;100.0;1.86;76.3
+mistral;Mistral 7B (Ollama Local);120;6.7;31;17203.3;103634.7;0.0;90.8;0;100.0;1.73;75.9
