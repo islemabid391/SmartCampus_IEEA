@@ -11,6 +11,11 @@ class Settings(BaseSettings):
     session_ttl_minutes: int = 120          # durÃ©e de validitÃ© d'une session
     session_max_messages: int = 50          # messages "user" max par session
     session_max_conversations: int = 3      # conversations max par session
+    
+    # --- Authentification ---
+    jwt_secret_key: str = "dev-only-change-me"
+    jwt_algorithm: str = "HS256"
+    access_token_expire_minutes: int = 60
 
     # --- Mémoire temporaire des conversations ---
     memoire_ttl_minutes: int = 60           # durée de vie d'un message (plafonnée par la session)

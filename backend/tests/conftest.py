@@ -7,6 +7,14 @@ from app.main import app
 from app.db.session import engine
 from app.api.deps import get_db
 
+from app.api.deps import require_responsable
+
+@pytest.fixture
+def responsable_connecte():
+    app.dependency_overrides[require_responsable] = lambda: None
+    yield
+    app.dependency_overrides.pop(require_responsable, None)
+
 
 @pytest.fixture
 def db_session():

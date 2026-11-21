@@ -9,6 +9,8 @@ from app.models.catalogue import (
     Formation,
 )
 
+import pytest
+pytestmark = pytest.mark.usefixtures("responsable_connecte")
 
 # =============================================================================
 # FIXTURES

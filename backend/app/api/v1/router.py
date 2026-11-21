@@ -1,6 +1,6 @@
 
 from fastapi import APIRouter
-
+from app.api.v1.endpoints import auth
 from app.api.v1.endpoints import (
     health,
     tarifs,
@@ -8,15 +8,19 @@ from app.api.v1.endpoints import (
     sessions,
     conversations,
 )
-
-
 api_router = APIRouter()
+
+
+
+
 
 # Health check
 api_router.include_router(
     health.router,
     tags=["health"]
 )
+
+api_router.include_router(auth.router)
 
 # Gestion et consultation des tarifs
 api_router.include_router(
