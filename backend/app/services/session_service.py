@@ -55,7 +55,7 @@ def get_session_valide(db: Session, token: str) -> SessionVisiteur | None:
     )
     if session is None:
         return None
-    if session.statut == "expiree":
+    if session.statut in ("expiree", "rattachee"):
         return None
     if session.date_expiration <= datetime.now(timezone.utc):
         session.statut = "expiree"
