@@ -8,6 +8,8 @@ from app.api.v1.endpoints import (
     sessions,
     conversations,
 )
+from app.api.v1.endpoints import mes_conversations
+from app.api.v1.endpoints import rattachement
 api_router = APIRouter()
 
 
@@ -47,3 +49,7 @@ api_router.include_router(sessions.router)
 
 # Conversations et mémoire temporaire
 api_router.include_router(conversations.router)
+
+# Rattachement d'une session visiteur à un compte candidat (SA-29)
+api_router.include_router(rattachement.router)
+api_router.include_router(mes_conversations.router)

@@ -40,7 +40,7 @@ function storeConversationId(id: number): void {
   }
 }
 
-function clearConversationId(): void {
+export function clearConversationId(): void {
   try {
     window.localStorage.removeItem(CONVERSATION_KEY);
   } catch {
