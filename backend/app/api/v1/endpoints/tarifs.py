@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
 from fastapi.responses import Response
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
-
+from app.api.deps import get_db, require_responsable
 from app.api.deps import get_db
 from app.schemas.tarif import TarifCreate, TarifUpdate, TarifResponse
 from app.services.tarif_service import (
@@ -54,7 +54,8 @@ def read_tarifs_officiels(
     "",
     response_model=TarifResponse,
     status_code=status.HTTP_201_CREATED,
-    summary="Créer un tarif"
+    summary="Créer un tarif",
+    dependencies=[Depends(require_responsable)],
 )
 def create_tarif_endpoint(
     data: TarifCreate,
@@ -77,7 +78,8 @@ def create_tarif_endpoint(
 @router.get(
     "",
     response_model=list[TarifResponse],
-    summary="Lister les tarifs"
+    summary="Lister les tarifs",
+    dependencies=[Depends(require_responsable)],
 )
 def read_all_tarifs(
     skip: int = Query(default=0, ge=0),
@@ -105,7 +107,8 @@ def read_all_tarifs(
 @router.get(
     "/{tarif_id}",
     response_model=TarifResponse,
-    summary="Consulter un tarif par identifiant"
+    summary="Consulter un tarif par identifiant",
+    dependencies=[Depends(require_responsable)],
 )
 def read_tarif(
     tarif_id: int = Path(gt=0),
@@ -132,7 +135,8 @@ def read_tarif(
 @router.patch(
     "/{tarif_id}",
     response_model=TarifResponse,
-    summary="Modifier un tarif"
+    summary="Modifier un tarif",
+    dependencies=[Depends(require_responsable)],
 )
 def update_tarif_endpoint(
     data: TarifUpdate,
@@ -174,7 +178,8 @@ def update_tarif_endpoint(
 @router.delete(
     "/{tarif_id}",
     status_code=status.HTTP_204_NO_CONTENT,
-    summary="Supprimer un tarif"
+    summary="Supprimer un tarif",
+    dependencies=[Depends(require_responsable)],
 )
 def remove_tarif(
     tarif_id: int = Path(gt=0),

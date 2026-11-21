@@ -6,6 +6,8 @@ from sqlalchemy import select
 
 from app.models.catalogue import Etablissement, Formation, Tarif
 
+import pytest
+pytestmark = pytest.mark.usefixtures("responsable_connecte")
 
 @pytest.fixture
 def formation_test(db_session):

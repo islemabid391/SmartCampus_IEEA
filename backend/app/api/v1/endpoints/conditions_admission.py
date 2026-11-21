@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
 from fastapi.responses import Response
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
-
+from app.api.deps import get_db, require_responsable
 from app.api.deps import get_db
 from app.schemas.condition_admission import (
     ConditionAdmissionCreate,
@@ -58,7 +58,8 @@ def read_conditions_admission_officielles(
     "",
     response_model=ConditionAdmissionResponse,
     status_code=status.HTTP_201_CREATED,
-    summary="Créer une condition d'admission"
+    summary="Créer une condition d'admission",
+    dependencies=[Depends(require_responsable)],
 )
 def create_condition_admission_endpoint(
     data: ConditionAdmissionCreate,
@@ -88,7 +89,8 @@ def create_condition_admission_endpoint(
 @router.get(
     "",
     response_model=list[ConditionAdmissionResponse],
-    summary="Lister les conditions d'admission"
+    summary="Lister les conditions d'admission",
+    dependencies=[Depends(require_responsable)],
 )
 def read_all_conditions_admission(
     skip: int = Query(default=0, ge=0),
@@ -116,7 +118,8 @@ def read_all_conditions_admission(
 @router.get(
     "/{condition_id}",
     response_model=ConditionAdmissionResponse,
-    summary="Consulter une condition par identifiant"
+    summary="Consulter une condition par identifiant",
+    dependencies=[Depends(require_responsable)],
 )
 def read_condition_admission(
     condition_id: int = Path(gt=0),
@@ -143,7 +146,8 @@ def read_condition_admission(
 @router.patch(
     "/{condition_id}",
     response_model=ConditionAdmissionResponse,
-    summary="Modifier une condition d'admission"
+    summary="Modifier une condition d'admission",
+    dependencies=[Depends(require_responsable)],
 )
 def update_condition_admission_endpoint(
     data: ConditionAdmissionUpdate,
@@ -189,7 +193,8 @@ def update_condition_admission_endpoint(
 @router.delete(
     "/{condition_id}",
     status_code=status.HTTP_204_NO_CONTENT,
-    summary="Supprimer une condition d'admission"
+    summary="Supprimer une condition d'admission",
+    dependencies=[Depends(require_responsable)],
 )
 def remove_condition_admission(
     condition_id: int = Path(gt=0),
