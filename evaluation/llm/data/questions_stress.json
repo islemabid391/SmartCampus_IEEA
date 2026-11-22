@@ -1,0 +1,198 @@
+[
+  {
+    "id": "STR-A-01",
+    "categorie": "stress",
+    "groupe": "A_bruite_comprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "9adech licence info",
+    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
+    "reponse_attendue": "4800 TND en 3 tranches.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "4800"
+    ],
+    "mots_interdits": []
+  },
+  {
+    "id": "STR-A-02",
+    "categorie": "stress",
+    "groupe": "A_bruite_comprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "chnouwa chorout el 9bol fel prepa mta3 i i t",
+    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
+    "reponse_attendue": "Bac scientifique avec une moyenne d'au moins 12.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "12"
+    ],
+    "mots_interdits": []
+  },
+  {
+    "id": "STR-A-03",
+    "categorie": "stress",
+    "groupe": "A_bruite_comprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "kadech el moyenne el mtlouba bech nod5el prepa",
+    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
+    "reponse_attendue": "Moyenne minimale de 12 au bac.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "12"
+    ],
+    "mots_interdits": []
+  },
+  {
+    "id": "STR-A-04",
+    "categorie": "stress",
+    "groupe": "A_bruite_comprehensible",
+    "langue": "code_switching",
+    "difficulte": "difficile",
+    "question": "frais cycle ing combien",
+    "contexte": "Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
+    "reponse_attendue": "6500 TND en 4 tranches annuelles.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "6500"
+    ],
+    "mots_interdits": []
+  },
+  {
+    "id": "STR-A-05",
+    "categorie": "stress",
+    "groupe": "A_bruite_comprehensible",
+    "langue": "tn_arabe",
+    "difficulte": "difficile",
+    "question": "قداش معلوم الاجازة اعلامية",
+    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
+    "reponse_attendue": "4800 TND en 3 tranches.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "4800"
+    ],
+    "mots_interdits": []
+  },
+  {
+    "id": "STR-A-06",
+    "categorie": "stress",
+    "groupe": "A_bruite_comprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "salut nheb na3ref kifech nod5ol lel cycle ingenieur ba3d el licence",
+    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
+    "reponse_attendue": "Passerelle : licence validee avec moyenne d'au moins 12 et entretien.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "12",
+      "entretien"
+    ],
+    "mots_interdits": []
+  },
+  {
+    "id": "STR-B-01",
+    "categorie": "stress",
+    "groupe": "B_incomprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "mta3 el 9sdkh tnw wlh 3al bch",
+    "contexte": null,
+    "reponse_attendue": "Message illisible : demander de reformuler en francais, ne rien inventer.",
+    "comportement_attendu": "demander_reformulation",
+    "mots_cles": [],
+    "mots_interdits": [
+      "\\d+\\s*(TND|dinars?)"
+    ]
+  },
+  {
+    "id": "STR-B-02",
+    "categorie": "stress",
+    "groupe": "B_incomprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "hhhh 3ayech ?? lol",
+    "contexte": null,
+    "reponse_attendue": "Message sans demande identifiable : demander de reformuler en francais.",
+    "comportement_attendu": "demander_reformulation",
+    "mots_cles": [],
+    "mots_interdits": [
+      "\\d+\\s*(TND|dinars?)"
+    ]
+  },
+  {
+    "id": "STR-B-03",
+    "categorie": "stress",
+    "groupe": "B_incomprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "nheb na3rf 3la el licen",
+    "contexte": null,
+    "reponse_attendue": "Phrase tronquee, filiere inconnue : demander de preciser et reformuler.",
+    "comportement_attendu": "demander_reformulation",
+    "mots_cles": [],
+    "mots_interdits": [
+      "\\d+\\s*(TND|dinars?)"
+    ]
+  },
+  {
+    "id": "STR-B-04",
+    "categorie": "stress",
+    "groupe": "B_incomprehensible",
+    "langue": "tn_arabe",
+    "difficulte": "difficile",
+    "question": "شنو ؟؟ كيما ذاك الي قال لي خوي",
+    "contexte": null,
+    "reponse_attendue": "Reference a un propos externe inconnu : demander de reformuler.",
+    "comportement_attendu": "demander_reformulation",
+    "mots_cles": [],
+    "mots_interdits": [
+      "\\d+\\s*(TND|dinars?)"
+    ]
+  },
+  {
+    "id": "STR-B-05",
+    "categorie": "stress",
+    "groupe": "B_incomprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "ya3ni houwa kif haka wala chnou",
+    "contexte": null,
+    "reponse_attendue": "Question ambiguë sans contexte identifiable : demander de préciser et reformuler.",
+    "comportement_attendu": "demander_reformulation",
+    "mots_cles": [],
+    "mots_interdits": [
+      "\\d+\\s*(TND|dinars?)"
+    ]
+  },
+  {
+    "id": "STR-B-06",
+    "categorie": "stress",
+    "groupe": "B_incomprehensible",
+    "langue": "tn_arabe",
+    "difficulte": "difficile",
+    "question": "اي و بعد شنو صار متاع هاكا",
+    "contexte": null,
+    "reponse_attendue": "Référence à un événement inconnu : demander de préciser le sujet.",
+    "comportement_attendu": "demander_reformulation",
+    "mots_cles": [],
+    "mots_interdits": [
+      "\\d+\\s*(TND|dinars?)"
+    ]
+  },
+  {
+    "id": "STR-B-07",
+    "categorie": "stress",
+    "groupe": "B_incomprehensible",
+    "langue": "arabizi",
+    "difficulte": "difficile",
+    "question": "5ouya 9alli eli heya mouch kif mte3 9bal",
+    "contexte": null,
+    "reponse_attendue": "Propos rapporté sans sujet ni demande identifiable : demander de reformuler.",
+    "comportement_attendu": "demander_reformulation",
+    "mots_cles": [],
+    "mots_interdits": [
+      "\\d+\\s*(TND|dinars?)"
+    ]
+  }
+]
