@@ -53,3 +53,7 @@ api_router.include_router(conversations.router)
 # Rattachement d'une session visiteur à un compte candidat (SA-29)
 api_router.include_router(rattachement.router)
 api_router.include_router(mes_conversations.router)
+
+# Chat avec le LLM (SA-36)
+from app.api.v1.endpoints import chat
+api_router.include_router(chat.router)
