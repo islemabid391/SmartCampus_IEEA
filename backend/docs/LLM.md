@@ -37,3 +37,8 @@ Les messages d'erreur ne contiennent jamais la clé, l'URL ni les détails du fo
 ## Tests
 
 Les tests utilisent un LLM simulé : aucune clé ni réseau nécessaires (pytest).
+
+### Limites connues
+- La fenêtre de contexte (10 messages par défaut) ne conserve que les échanges récents : une information donnée au début d'une longue conversation n'est plus transmise au modèle.
+- Aucune extraction automatique du profil (niveau, moyenne, intérêts) n'alimente la mémoire (`mettre_a_jour_memoire`) : le bloc « informations déjà connues » reste vide en usage réel tant qu'une telle étape n'existe pas.
+- Sans contexte officiel (RAG), le modèle refuse volontairement de donner montants, durées, seuils ou dates, et renvoie vers l'administration.
