@@ -1,3 +1,4 @@
+from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -22,6 +23,15 @@ class Settings(BaseSettings):
     memoire_max_messages_stockes: int = 100  # messages gardés par conversation
     memoire_fenetre_messages: int = 10      # derniers messages donnés à l'IA
     memoire_max_caracteres: int = 2000      # taille max d'un message conservé
+
+    # --- LLM (API compatible OpenAI : Groq, OpenRouter, Ollama...) ---
+    llm_base_url: str = "https://api.groq.com/openai/v1"
+    llm_model: str = "openai/gpt-oss-20b"        # modèle retenu en SA-33
+    llm_api_key: SecretStr | None = None         # jamais affichée ni journalisée
+    llm_timeout_secondes: float = 30.0           # délai maximal d'une requête
+    llm_max_tokens: int = 1500                   # recommandation du rapport SA-33
+    llm_temperature: float = 0.2
+    llm_max_retries: int = 2                     # nouvelles tentatives (timeout, 5xx, réseau)
 
     model_config = SettingsConfigDict(env_file=".env")
 
