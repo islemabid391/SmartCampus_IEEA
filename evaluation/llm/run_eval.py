@@ -179,14 +179,30 @@ def main():
     parser.add_argument("--repeats", type=int, default=None, help="Nombre de passes (défaut: config)")
     parser.add_argument("--pause", type=float, default=0.0, help="Pause en secondes entre chaque requête")
     parser.add_argument("--dry-run", action="store_true", help="Vérifie la config sans appeler les API")
+    parser.add_argument("--models", type=str, default=None,help="IDs des modèles à tester, séparés par des virgules")
+    parser.add_argument("--max-tokens", type=int, default=None,help="Remplace max_tokens du fichier de config")
+    parser.add_argument("--prompt-file", type=Path, default=None,
+                        help="Fichier texte remplaçant le prompt système du fichier de config")
+    parser.add_argument("--reprendre", type=Path, default=None,
+                        help="Ancien raw_*.jsonl : conserve les réussites, ne relance que les échecs")
     args = parser.parse_args()
 
     load_dotenv(BASE_DIR / ".env")
 
     config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
     params = config["parametres"]
+    if args.max_tokens:
+        params["max_tokens"] = args.max_tokens
     prompt_systeme = config["prompt_systeme"].strip()
+    if args.prompt_file:
+        prompt_systeme = args.prompt_file.read_text(encoding="utf-8").strip()
     modeles = config["modeles"]
+    if args.models:
+        ids_demandes = [x.strip() for x in args.models.split(",")]
+        modeles = [m for m in modeles if m["id"] in ids_demandes]
+        inconnus = set(ids_demandes) - {m["id"] for m in modeles}
+        if inconnus:
+            raise SystemExit(f"Modèle(s) inconnu(s) dans models.yaml : {inconnus}")
 
     questions_brutes = args.questions.read_text(encoding="utf-8")
     empreinte_questions = hashlib.sha256(questions_brutes.encode("utf-8")).hexdigest()[:16]
@@ -221,6 +237,7 @@ def main():
         "passes": passes,
         "parametres": params,
         "modeles": modeles,
+        "prompt_file": str(args.prompt_file) if args.prompt_file else None,
     }
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -232,7 +249,14 @@ def main():
                 f"Variable d'environnement manquante : {m['api_key_env']} pour le modèle {m['id']}"
             )
         clients[m["id"]] = OpenAI(api_key=cle, base_url=m["base_url"])
-
+    deja_faits = {}
+    if args.reprendre:
+        for ligne in args.reprendre.read_text(encoding="utf-8").splitlines():
+            if ligne.strip():
+                r = json.loads(ligne)
+                if r.get("succes"):
+                    deja_faits[(r["passe"], r["modele_id"], r["question_id"])] = r
+        print(f"Reprise : {len(deja_faits)} réponses réussies conservées")
     compteur = 0
     with raw_path.open("w", encoding="utf-8") as f_out:
         for passe in range(1, passes + 1):
@@ -241,6 +265,11 @@ def main():
                 for idx, item in enumerate(questions, start=1):
                     compteur += 1
                     q_id = item.get("id", f"Q{idx:02d}")
+                    cle_reprise = (passe, m["id"], q_id)
+                    if cle_reprise in deja_faits:
+                        f_out.write(json.dumps(deja_faits[cle_reprise], ensure_ascii=False) + "\n")
+                        f_out.flush()
+                        continue
                     prompt_user = construire_prompt_utilisateur(item)
 
                     res = appeler_modele_avec_reprise(
