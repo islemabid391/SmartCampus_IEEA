@@ -40,7 +40,7 @@ def get_conversation_de_session(
 
 def ajouter_message(
     db: Session,
-    session: SessionVisiteur,
+    session: SessionVisiteur | None,
     conversation: Conversation,
     role: str,
     contenu: str,
@@ -56,10 +56,10 @@ def ajouter_message(
     contenu = contenu.strip()[: settings.memoire_max_caracteres]
     if not contenu:
         raise ValueError("Le message est vide.")
-    if role == "user":
+    if session is not None and role == "user":
         verifier_quota_messages(db, session)
 
-    expiration = min(
+    expiration = None if session is None else min(
         session.date_expiration,
         datetime.now(timezone.utc) + timedelta(minutes=settings.memoire_ttl_minutes),
     )
@@ -73,7 +73,8 @@ def ajouter_message(
     try:
         db.add(message)
         db.flush()
-        _limiter_stockage(db, conversation)
+        if session is not None:
+            _limiter_stockage(db, conversation)
         db.commit()
         db.refresh(message)
     except Exception:

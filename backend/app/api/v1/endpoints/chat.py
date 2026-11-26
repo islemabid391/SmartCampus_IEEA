@@ -1,28 +1,46 @@
 """Envoi d'une question à l'assistant (LLM) dans une conversation."""
 
 from fastapi import APIRouter, Depends, HTTPException, Path, status
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.api.deps import get_current_session, get_db
+from app.api.deps import get_current_session, get_db, require_candidat
 from app.core.config import settings
-from app.models.utilisateur import SessionVisiteur
+from app.models.utilisateur import Conversation, SessionVisiteur, Utilisateur
 from app.schemas.conversation import ChatRequest, ChatResponse
 from app.services import llm_service
-from app.services.chat_service import construire_messages
-from app.services.memoire_service import (
-    ajouter_message,
-    get_conversation_de_session,
-    get_historique,
-    get_memoire,
-)
-from app.services.quota_service import verifier_quota_messages
+from app.services.chat_service import repondre
+from app.services.memoire_service import get_conversation_de_session
+from app.services.quota_service import verifier_quota_candidat
 
 router = APIRouter(prefix="/conversations", tags=["Chat (LLM)"])
+router_candidat = APIRouter(prefix="/me/conversations", tags=["Chat (LLM)"])
+
+
+def _question(data: ChatRequest) -> str:
+    question = data.contenu.strip()[: settings.memoire_max_caracteres]
+    if not question:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Le message est vide.")
+    return question
+
+
+def _repondre(db, conversation, data, session=None) -> ChatResponse:
+    """Appelle le LLM ; une erreur du LLM devient une erreur HTTP sans détail technique."""
+    try:
+        reponse, resultat = repondre(db, conversation, _question(data), data.langue, session)
+    except llm_service.LLMError as erreur:
+        raise HTTPException(erreur.status_code, erreur.message)
+    return ChatResponse(
+        reponse=reponse,
+        modele=resultat.modele,
+        duree_ms=resultat.duree_ms,
+        tronquee=resultat.tronquee,
+    )
 
 @router.post(
     "/{conversation_id}/chat",
     response_model=ChatResponse,
-    summary="Poser une question à l'assistant",
+    summary="Poser une question à l'assistant (visiteur)",
 )
 def chat(
     data: ChatRequest,
@@ -30,7 +48,7 @@ def chat(
     session: SessionVisiteur = Depends(get_current_session),
     db: Session = Depends(get_db),
 ):
-    """Envoie la question au LLM avec l'historique récent et les informations déjà connues.
+    """Visiteur avec session.
 
     - 401 session invalide, 404 conversation inconnue, 429 quota de messages atteint ;
     - 503 / 504 / 502 si le service d'IA est indisponible, trop lent ou renvoie une erreur ;
@@ -40,23 +58,31 @@ def chat(
     conversation = get_conversation_de_session(db, session, conversation_id)
     if conversation is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Conversation introuvable.")
+    return _repondre(db, conversation, data, session)
 
-    question = data.contenu.strip()[: settings.memoire_max_caracteres]
-    if not question:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Le message est vide.")
-    verifier_quota_messages(db, session)  # avant l'appel (payant) au LLM
 
-    messages = construire_messages(question, get_historique(db, conversation), get_memoire(conversation))
-    try:
-        resultat = llm_service.appeler_llm(messages)
-    except llm_service.LLMError as erreur:
-        raise HTTPException(erreur.status_code, erreur.message)
+@router_candidat.post(
+    "/{conversation_id}/chat",
+    response_model=ChatResponse,
+    summary="Continuer une de mes conversations avec l'assistant (candidat connecté)",
+)
+def chat_candidat(
+    data: ChatRequest,
+    conversation_id: int = Path(gt=0),
+    utilisateur: Utilisateur = Depends(require_candidat),
+    db: Session = Depends(get_db),
+):
+    """Candidat connecté : chaque conversation garde son propre contexte et sa propre mémoire.
 
-    ajouter_message(db, session, conversation, "user", question, langue=data.langue)
-    reponse = ajouter_message(db, session, conversation, "assistant", resultat.texte)
-    return ChatResponse(
-        reponse=reponse,
-        modele=resultat.modele,
-        duree_ms=resultat.duree_ms,
-        tronquee=resultat.tronquee,
+    404 si la conversation n'est pas la sienne ; 429 si la limite quotidienne est atteinte.
+    """
+    conversation = db.scalar(
+        select(Conversation).where(
+            Conversation.id == conversation_id,
+            Conversation.utilisateur_id == utilisateur.id,  # jamais celle d'un autre
+        )
     )
+    if conversation is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Conversation introuvable.")
+    verifier_quota_candidat(db, utilisateur.id)
+    return _repondre(db, conversation, data)

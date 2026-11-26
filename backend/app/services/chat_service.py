@@ -1,7 +1,13 @@
 """Construction de la conversation envoyée au LLM (dialogue multi-tours)."""
 
 from typing import Iterable, Protocol
+from sqlalchemy.orm import Session
+
 from app.core.config import settings
+from app.models.utilisateur import Conversation, Message, SessionVisiteur
+from app.services import llm_service
+from app.services.memoire_service import ajouter_message, get_historique, get_memoire
+from app.services.quota_service import verifier_quota_messages
 from app.core.prompts import SYSTEM_PROMPT
 from app.core.prompts import SYSTEM_PROMPT
 
@@ -96,3 +102,26 @@ def construire_messages(
         messages.append({"role": message.role, "content": message.contenu})
     messages.append({"role": "user", "content": question})
     return messages
+
+
+def repondre(
+    db: Session,
+    conversation: Conversation,
+    question: str,
+    langue: str | None = None,
+    session: SessionVisiteur | None = None,
+) -> tuple[Message, llm_service.LLMReponse]:
+    """Pose la question au LLM dans le contexte de la conversation et enregistre l'échange.
+
+    `session` : visiteur anonyme (quota de session, messages temporaires) ;
+    `None` : candidat connecté (messages permanents). Lève `LLMError` si le LLM échoue :
+    dans ce cas, rien n'est enregistré.
+    """
+    if session is not None:
+        verifier_quota_messages(db, session)  # avant l'appel (payant) au LLM
+    messages = construire_messages(question, get_historique(db, conversation), get_memoire(conversation))
+    resultat = llm_service.appeler_llm(messages)
+
+    ajouter_message(db, session, conversation, "user", question, langue=langue)
+    reponse = ajouter_message(db, session, conversation, "assistant", resultat.texte)
+    return reponse, resultat
