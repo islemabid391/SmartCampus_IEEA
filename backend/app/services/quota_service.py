@@ -1,5 +1,7 @@
 """Limites d'utilisation d'une session visiteur (anti-abus)."""
 
+from datetime import datetime, timedelta, timezone
+
 from fastapi import HTTPException, status
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
@@ -47,4 +49,22 @@ def verifier_quota_conversations(db: Session, session: SessionVisiteur) -> None:
         raise HTTPException(
             status_code=status.HTTP_429_TOO_MANY_REQUESTS,
             detail="Limite de conversations atteinte pour cette session.",
+        )
+
+def verifier_quota_candidat(db: Session, utilisateur_id: int) -> None:
+    """Limite quotidienne d'un candidat connecté (protège le quota du LLM). 429 si atteinte."""
+    depuis = datetime.now(timezone.utc) - timedelta(days=1)
+    envoyes = db.scalar(
+        select(func.count(Message.id))
+        .join(Conversation, Message.conversation_id == Conversation.id)
+        .where(
+            Conversation.utilisateur_id == utilisateur_id,
+            Message.role == "user",
+            Message.date_creation >= depuis,
+        )
+    ) or 0
+    if envoyes >= settings.candidat_max_messages_jour:
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail="Limite quotidienne de messages atteinte. Réessayez demain.",
         )

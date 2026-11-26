@@ -22,6 +22,7 @@ class Settings(BaseSettings):
     memoire_ttl_minutes: int = 60           # durée de vie d'un message (plafonnée par la session)
     memoire_max_messages_stockes: int = 100  # messages gardés par conversation
     memoire_fenetre_messages: int = 10      # derniers messages donnés à l'IA
+    candidat_max_messages_jour: int = 100   # questions par jour d'un candidat connecté
     memoire_max_caracteres: int = 2000      # taille max d'un message conservé
 
     # --- LLM (API compatible OpenAI : Groq, OpenRouter, Ollama...) ---

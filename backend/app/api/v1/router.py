@@ -57,3 +57,4 @@ api_router.include_router(mes_conversations.router)
 # Chat avec le LLM (SA-36)
 from app.api.v1.endpoints import chat
 api_router.include_router(chat.router)
+api_router.include_router(chat.router_candidat)

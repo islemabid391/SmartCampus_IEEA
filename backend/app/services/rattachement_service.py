@@ -1,6 +1,6 @@
 """Rattachement d'une session visiteur (et de ses conversations) à un compte candidat."""
 
-from decimal import Decimal
+
 
 from sqlalchemy import func, select, update
 from sqlalchemy.orm import Session
@@ -8,11 +8,11 @@ from sqlalchemy.orm import Session
 from app.models.utilisateur import (
     Conversation,
     Message,
-    ProfilAcademique,
+
     SessionVisiteur,
     Utilisateur,
 )
-from app.services.memoire_service import CHAMPS_PROFIL, get_memoire
+
 
 
 class ConsentementRequis(Exception):
@@ -42,34 +42,6 @@ def apercu_rattachement(db: Session, session: SessionVisiteur) -> dict:
         "nb_conversations": nb_conversations,
         "nb_messages": nb_messages,
     }
-
-
-def _copier_memoire_vers_profil(
-    db: Session, utilisateur: Utilisateur, conversations: list[Conversation]
-) -> None:
-    """Pré-remplit le profil académique sans écraser ce que le candidat a déjà saisi."""
-    infos: dict = {}
-    for conversation in sorted(conversations, key=lambda c: c.id):
-        infos.update(get_memoire(conversation))  # la plus récente l'emporte
-    if not infos:
-        return
-
-    profil = db.scalar(
-        select(ProfilAcademique).where(ProfilAcademique.utilisateur_id == utilisateur.id)
-    )
-    if profil is None:
-        profil = ProfilAcademique(utilisateur_id=utilisateur.id)
-        db.add(profil)
-
-    for champ in CHAMPS_PROFIL:
-        if champ not in infos:
-            continue
-        if getattr(profil, champ) not in (None, "", []):
-            continue  # déjà renseigné par le candidat : on ne touche pas
-        valeur = infos[champ]
-        if champ == "moyenne":
-            valeur = Decimal(str(valeur))
-        setattr(profil, champ, valeur)
 
 
 def rattacher_session(
@@ -116,7 +88,7 @@ def rattacher_session(
             .values(date_expiration=None)
         )
 
-        _copier_memoire_vers_profil(db, utilisateur, conversations)
+        # la memoire reste dans chaque conversation (pas de fusion dans un profil commun)
 
         verrouillee.utilisateur_id = utilisateur.id
         verrouillee.consentement_rattachement = True

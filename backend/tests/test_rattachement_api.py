@@ -152,29 +152,25 @@ def test_la_purge_ne_supprime_pas_les_messages_rattaches(client, db_session):
     assert len(messages) == 2
 
 
-def test_la_memoire_prerempli_le_profil(client, db_session):
+def test_la_memoire_reste_dans_la_conversation_pas_dans_un_profil(client, db_session):
     visiteur, cid = _visiteur_avec_conversation(client)
     conversation = db_session.get(Conversation, cid)
     mettre_a_jour_memoire(db_session, conversation, {
         "niveau_scolaire": "Terminale",
-        "moyenne": 15.5,
         "centres_interet": ["maths", "informatique"],
-        "objectif_professionnel": "Ingénieur logiciel",
     })
     compte = _inscription(client)
     utilisateur_id = client.get("/api/v1/auth/me", headers=compte).json()["id"]
 
     assert client.post(URL, json=CORPS_OK, headers={**visiteur, **compte}).status_code == 200
 
+    db_session.refresh(conversation)
+    assert conversation.utilisateur_id == utilisateur_id
+    assert conversation.memoire["niveau_scolaire"] == "Terminale"  # gardée avec la conversation
     profil = db_session.scalar(
         select(ProfilAcademique).where(ProfilAcademique.utilisateur_id == utilisateur_id)
     )
-    assert profil is not None
-    assert profil.niveau_scolaire == "Terminale"
-    assert float(profil.moyenne) == 15.5
-    assert profil.centres_interet == ["maths", "informatique"]
-    assert profil.objectif_professionnel == "Ingénieur logiciel"
-
+    assert profil is None  # rien n'est fusionné dans un profil commun
 
 def test_un_responsable_ne_peut_pas_rattacher_403(client, db_session):
     visiteur, _ = _visiteur_avec_conversation(client)
