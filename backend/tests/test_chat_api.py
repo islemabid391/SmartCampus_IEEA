@@ -1,5 +1,11 @@
 import pytest
+from datetime import datetime, timedelta, timezone
 
+from sqlalchemy import update
+
+from app.core.prompts import SYSTEM_PROMPT
+from app.models.utilisateur import Conversation, Message
+from app.services.memoire_service import mettre_a_jour_memoire
 from app.core.config import settings
 from app.services import llm_service
 from app.services.llm_service import LLMReponse, LLMTimeout
@@ -94,6 +100,56 @@ def test_quota_de_messages_atteint_429_sans_appel_au_llm(client, entetes, conver
 def test_message_vide_refuse(client, entetes, conversation_id, llm_simule):
     assert client.post(url(conversation_id), json={"contenu": "   "}, headers=entetes).status_code == 422
     assert llm_simule == []
+    
+def test_la_fenetre_de_contexte_limite_l_historique(
+    client, entetes, conversation_id, llm_simule, monkeypatch
+):
+    monkeypatch.setattr(settings, "memoire_fenetre_messages", 4)
+    for numero in range(1, 5):
+        r = client.post(url(conversation_id), json={"contenu": f"Question {numero}"}, headers=entetes)
+        assert r.status_code == 200
+
+    quatrieme_envoi = llm_simule[3]
+    questions = [m["content"] for m in quatrieme_envoi if m["role"] == "user"]
+    assert questions == ["Question 2", "Question 3", "Question 4"]  # la question 1 est sortie de la fenêtre
+
+
+def test_un_message_expire_n_est_plus_envoye_au_modele(
+    client, db_session, entetes, conversation_id, llm_simule
+):
+    client.post(url(conversation_id), json={"contenu": "Question ancienne"}, headers=entetes)
+    db_session.execute(
+        update(Message)
+        .where(Message.conversation_id == conversation_id)
+        .values(date_expiration=datetime.now(timezone.utc) - timedelta(minutes=1))
+    )
+    db_session.flush()
+
+    client.post(url(conversation_id), json={"contenu": "Nouvelle question"}, headers=entetes)
+    assert [m["role"] for m in llm_simule[1]] == ["system", "user"]
+
+
+def test_les_informations_deja_connues_sont_transmises(
+    client, db_session, entetes, conversation_id, llm_simule
+):
+    conversation = db_session.get(Conversation, conversation_id)
+    mettre_a_jour_memoire(
+        db_session, conversation,
+        {"niveau_scolaire": "Terminale", "centres_interet": ["maths"]},
+    )
+    client.post(url(conversation_id), json={"contenu": "Que me conseillez-vous ?"}, headers=entetes)
+
+    systeme = llm_simule[0][0]["content"]
+    assert "Niveau scolaire : Terminale" in systeme
+    assert "Centres d'intérêt : maths" in systeme
+
+
+def test_les_regles_sur_les_informations_officielles_sont_envoyees(
+    client, entetes, conversation_id, llm_simule
+):
+    client.post(url(conversation_id), json={"contenu": "C'est combien ?"}, headers=entetes)
+    assert SYSTEM_PROMPT in llm_simule[0][0]["content"]
+
 
 # --- Candidat connecté : chaque conversation continue séparément ---
 

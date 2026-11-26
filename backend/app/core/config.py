@@ -24,6 +24,7 @@ class Settings(BaseSettings):
     memoire_fenetre_messages: int = 10      # derniers messages donnés à l'IA
     candidat_max_messages_jour: int = 100   # questions par jour d'un candidat connecté
     memoire_max_caracteres: int = 2000      # taille max d'un message conservé
+    memoire_max_caracteres_contexte: int = 6000  # taille totale de l'historique donné à l'IA
 
     # --- LLM (API compatible OpenAI : Groq, OpenRouter, Ollama...) ---
     llm_base_url: str = "https://api.groq.com/openai/v1"

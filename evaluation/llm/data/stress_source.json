@@ -1,0 +1,57 @@
+[
+  {"id": "STR-A-01", "groupe": "A_bruite_comprehensible", "langue": "arabizi", "question": "9adech licence info",
+   "contexte_de": "ADM-001", "attendu": "repondre", "reponse_attendue": "4800 TND en 3 tranches.", "mots_cles": ["4800"]},
+  {"id": "STR-A-02", "groupe": "A_bruite_comprehensible", "langue": "arabizi", "question": "chnouwa chorout el 9bol fel prepa mta3 i i t",
+   "contexte_de": "ADM-003", "attendu": "repondre", "reponse_attendue": "Bac scientifique avec une moyenne d'au moins 12.", "mots_cles": ["12"]},
+  {"id": "STR-A-03", "groupe": "A_bruite_comprehensible", "langue": "arabizi", "question": "kadech el moyenne el mtlouba bech nod5el prepa",
+   "contexte_de": "ADM-005", "attendu": "repondre", "reponse_attendue": "Moyenne minimale de 12 au bac.", "mots_cles": ["12"]},
+  {"id": "STR-A-04", "groupe": "A_bruite_comprehensible", "langue": "code_switching", "question": "frais cycle ing combien",
+   "contexte_de": "ADM-002", "attendu": "repondre", "reponse_attendue": "6500 TND en 4 tranches annuelles.", "mots_cles": ["6500"]},
+  {"id": "STR-A-05", "groupe": "A_bruite_comprehensible", "langue": "tn_arabe", "question": "قداش معلوم الاجازة اعلامية",
+   "contexte_de": "ADM-001", "attendu": "repondre", "reponse_attendue": "4800 TND en 3 tranches.", "mots_cles": ["4800"]},
+  {"id": "STR-A-06", "groupe": "A_bruite_comprehensible", "langue": "arabizi", "question": "salut nheb na3ref kifech nod5ol lel cycle ingenieur ba3d el licence",
+   "contexte_de": "ADM-006", "attendu": "repondre", "reponse_attendue": "Passerelle : licence validee avec moyenne d'au moins 12 et entretien.", "mots_cles": ["12", "entretien"]},
+
+  {"id": "STR-B-01",
+   "groupe": "B_incomprehensible", 
+   "langue": "arabizi", "question": "mta3 el 9sdkh tnw wlh 3al bch",
+   "contexte_de": null, 
+   "attendu": "demander_reformulation", 
+   "reponse_attendue": "Message illisible : demander de reformuler en francais, ne rien inventer.", "mots_cles": []},
+  {"id": "STR-B-02", "groupe": "B_incomprehensible", "langue": "arabizi", "question": "hhhh 3ayech ?? lol",
+   "contexte_de": null, "attendu": "demander_reformulation", "reponse_attendue": "Message sans demande identifiable : demander de reformuler en francais.", "mots_cles": []},
+  {"id": "STR-B-03", "groupe": "B_incomprehensible", "langue": "arabizi", "question": "nheb na3rf 3la el licen",
+   "contexte_de": null, "attendu": "demander_reformulation", "reponse_attendue": "Phrase tronquee, filiere inconnue : demander de preciser et reformuler.", "mots_cles": []},
+  {"id": "STR-B-04", "groupe": "B_incomprehensible", "langue": "tn_arabe", "question": "شنو ؟؟ كيما ذاك الي قال لي خوي",
+   "contexte_de": null, "attendu": "demander_reformulation", "reponse_attendue": "Reference a un propos externe inconnu : demander de reformuler.", "mots_cles": []}
+    ,{
+    "id": "STR-B-05",
+    "groupe": "B_incomprehensible",
+    "langue": "arabizi",
+    "question": "ya3ni houwa kif haka wala chnou",
+    "contexte_de": null,
+    "attendu": "demander_reformulation",
+    "reponse_attendue": "Question ambiguë sans contexte identifiable : demander de préciser et reformuler.",
+    "mots_cles": []
+  },
+  {
+    "id": "STR-B-06",
+    "groupe": "B_incomprehensible",
+    "langue": "tn_arabe",
+    "question": "اي و بعد شنو صار متاع هاكا",
+    "contexte_de": null,
+    "attendu": "demander_reformulation",
+    "reponse_attendue": "Référence à un événement inconnu : demander de préciser le sujet.",
+    "mots_cles": []
+  },
+  {
+    "id": "STR-B-07",
+    "groupe": "B_incomprehensible",
+    "langue": "arabizi",
+    "question": "5ouya 9alli eli heya mouch kif mte3 9bal",
+    "contexte_de": null,
+    "attendu": "demander_reformulation",
+    "reponse_attendue": "Propos rapporté sans sujet ni demande identifiable : demander de reformuler.",
+    "mots_cles": []
+  }
+]
