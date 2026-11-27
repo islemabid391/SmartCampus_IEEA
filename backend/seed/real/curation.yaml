@@ -1,0 +1,211 @@
+# SA-18 - Curation des formations collectées. À RELIRE ET CORRIGER À LA MAIN.
+# - Mettez `valider: true` uniquement après avoir vérifié la page source (url) : seules ces entrées sont importées.
+# - cycle : licence | prepa | ingenieur | autre (mastère, architecture, formation continue...)
+# - parcours_de : code de la formation parente si la page est un PARCOURS/spécialité d'une autre formation.
+# - Champs facultatifs de correction : nom, duree_annees, description, debouches, acces, frais_tnd, frais_periode,
+#   tarif_valide_du, tarif_valide_au, langue, modalites, modules (false = ne pas importer les modules).
+# - formations_virtuelles : formations sans page propre (ex. un menu « Licence en informatique » regroupant des parcours).
+
+formations_virtuelles:
+  - valider: true
+    etablissement: IIT
+    code: IIT-LIC-INFO
+    nom: Licence en informatique
+    cycle: licence
+    duree_annees: 3
+    description: "Licence en informatique à l'IIT (Sfax) déclinée en parcours spécialisés (génie logiciel, big data & IA, réseaux & cybersécurité, systèmes embarqués & IoT)."
+    source_url: https://iit.tn/licences/
+
+pages:
+  # --- IIT : Cycle préparatoire ---
+  - url: https://iit.tn/filieres-ingenieur/cycle-preparatoire/
+    valider: true
+    etablissement: IIT
+    code: IIT-CYCLE-PREPA
+    nom: Cycle Préparatoire Intégré
+    cycle: prepa
+    parcours_de: null
+    duree_annees: 2
+    description: "Cycle préparatoire intégré de 2 ans à l'IIT (Sfax) préparant les bacheliers scientifiques et techniques à l'accès aux filières d'ingénieurs (Maths-Physique, Informatique, Technologie)."
+    acces: "Accessible aux titulaires du Baccalauréat scientifique ou technique (Mathématiques, Sciences Expérimentales, Sciences Techniques, Sciences de l'Informatique)."
+    frais_periode: "période non précisée sur la fiche (à vérifier selon l'année universitaire)"
+
+  # --- IIT : Parcours de la Licence en informatique (rattachés à IIT-LIC-INFO) ---
+  - url: https://iit.tn/genie-logiciel-systemes-intelligents/
+    valider: true
+    etablissement: IIT
+    code: IIT-PARCOURS-GLSI
+    nom: Génie Logiciel et Systèmes Intelligents
+    cycle: licence
+    parcours_de: IIT-LIC-INFO
+    duree_annees: 3
+    notes: "Rattaché en tant que spécialité/parcours de IIT-LIC-INFO."
+
+  - url: https://iit.tn/big-data-et-analyse-de-donnees/
+    valider: true
+    etablissement: IIT
+    code: IIT-PARCOURS-BIGDATA-IA
+    nom: Big Data et Analyse de Données
+    cycle: licence
+    parcours_de: IIT-LIC-INFO
+    duree_annees: 3
+    notes: "Rattaché en tant que spécialité/parcours de IIT-LIC-INFO."
+
+  - url: https://iit.tn/reseaux-et-cybersecurite/
+    valider: true
+    etablissement: IIT
+    code: IIT-PARCOURS-RESEAUX-CYBER
+    nom: Réseaux et Cybersécurité
+    cycle: licence
+    parcours_de: IIT-LIC-INFO
+    duree_annees: 3
+    notes: "Rattaché en tant que spécialité/parcours de IIT-LIC-INFO."
+
+  - url: https://iit.tn/systemes-embarques-internet-des-objets-iot/
+    valider: true
+    etablissement: IIT
+    code: IIT-PARCOURS-IOT
+    nom: Systèmes Embarqués et Internet des Objets (IoT)
+    cycle: licence
+    parcours_de: IIT-LIC-INFO
+    duree_annees: 3
+    notes: "Rattaché en tant que spécialité/parcours de IIT-LIC-INFO."
+
+  # --- IIT : Licences technologiques ---
+  - url: https://iit.tn/licence-en-systemes-electriques-intelligents-energies-renouvelables/
+    valider: true
+    etablissement: IIT
+    code: IIT-LIC-SEIER
+    nom: Licence en Systèmes Électriques Intelligents et Énergies Renouvelables
+    cycle: licence
+    parcours_de: null
+    duree_annees: 3
+
+  - url: https://iit.tn/licence-en-mecatronique-systemes-intelligents/
+    valider: true
+    etablissement: IIT
+    code: IIT-LIC-MECATRONIQUE
+    nom: Licence en Mécatronique et Systèmes Intelligents
+    cycle: licence
+    parcours_de: null
+    duree_annees: 3
+
+  # --- IIT : Filières Ingénieur ---
+  - url: https://iit.tn/filieres-ingenieur/genie-informatique-2/
+    valider: true
+    etablissement: IIT
+    code: IIT-ING-INFO
+    nom: Diplôme National d'Ingénieur en Génie Informatique
+    cycle: ingenieur
+    parcours_de: null
+    duree_annees: 3
+
+  - url: https://iit.tn/filieres-ingenieur/genie-civil/
+    valider: true
+    etablissement: IIT
+    code: IIT-ING-CIVIL
+    nom: Diplôme National d'Ingénieur en Génie Civil
+    cycle: ingenieur
+    parcours_de: null
+    duree_annees: 3
+
+  - url: https://iit.tn/genie-des-procedes/
+    valider: true
+    etablissement: IIT
+    code: IIT-ING-PROCEDES
+    nom: Diplôme National d'Ingénieur en Génie des Procédés
+    cycle: ingenieur
+    parcours_de: null
+    duree_annees: 3
+
+  - url: https://iit.tn/filieres-ingenieur/genie-mecanique-2/
+    valider: true
+    etablissement: IIT
+    code: IIT-ING-MECANIQUE
+    nom: Diplôme National d'Ingénieur en Génie Mécanique
+    cycle: ingenieur
+    parcours_de: null
+    duree_annees: 3
+
+  - url: https://iit.tn/filieres-ingenieur/genie-industriel-2/
+    valider: true
+    etablissement: IIT
+    code: IIT-ING-INDUSTRIEL
+    nom: Diplôme National d'Ingénieur en Génie Industriel
+    cycle: ingenieur
+    parcours_de: null
+    duree_annees: 3
+
+  # --- IIT : Mastère ---
+  - url: https://iit.tn/mastere/
+    valider: true
+    etablissement: IIT
+    code: IIT-MASTER-IND40
+    nom: Mastère en Industrie 4.0
+    cycle: autre
+    parcours_de: null
+    duree_annees: 2
+
+  # --- ISB : Licences et Mastères ---
+  - url: https://isb.tn/programme-lba/
+    valider: true
+    etablissement: ISB
+    code: ISB-LIC-LBA
+    nom: Licence en Administration des Affaires (Business Administration)
+    cycle: licence
+    parcours_de: null
+    duree_annees: 3
+    langue: "Anglais"
+    description: "Licence en Administration des Affaires (Bachelor in Business Administration) de l'ISB Sfax, dispensée sur 3 ans (6 semestres) couvrant le management, la finance, la comptabilité, le marketing, l'économie et le droit des affaires."
+
+  - url: https://isb.tn/licences-program/
+    valider: false
+    etablissement: ISB
+    code: ISB-LICENCES-CATALOGUE
+    nom: Programmes de Licence - ISB
+    cycle: licence
+    parcours_de: null
+    duree_annees: 3
+    modules: false
+    notes: "Page catalogue globale : garder à false si vous ne voulez pas importer une formation générique en plus des fiches dédiées."
+
+  - url: https://isb.tn/mmd/
+    valider: true
+    etablissement: ISB
+    code: ISB-MASTER-MMD
+    nom: Mastère en Marketing Digital
+    cycle: autre
+    parcours_de: null
+    duree_annees: 2
+
+  - url: https://isb.tn/program-mpc/
+    valider: true
+    etablissement: ISB
+    code: ISB-MASTER-MPC
+    nom: Mastère Professionnel en Comptabilité
+    cycle: autre
+    parcours_de: null
+    duree_annees: 2
+    description: "Mastère professionnel orienté comptabilité, finance et contrôle de gestion à l'ISB (à compléter/vérifier sur la page officielle car l'extrait initial contenait une description générique)."
+
+  - url: https://isb.tn/program/
+    valider: false
+    etablissement: ISB
+    code: ISB-MASTERS-CATALOGUE
+    nom: Programmes de Mastère - ISB
+    cycle: autre
+    parcours_de: null
+    duree_annees: 2
+    modules: false
+    notes: "Page catalogue globale : garder à false pour éviter les doublons avec les fiches individuelles."
+
+  # --- ISA : Architecture ---
+  - url: https://isa.tn/formation-en-architecture-en-tunisie-cursus-diplome-isa-sfax/
+    valider: true
+    etablissement: ISA
+    code: ISA-ARCHI-CURSUS
+    nom: Cursus et Diplôme en Architecture - ISA Sfax
+    cycle: autre
+    parcours_de: null
+    duree_annees: 6
+    description: "Cursus d'architecture à l'ISA Sfax étalé sur six (6) années réparties sur deux cycles d'études."

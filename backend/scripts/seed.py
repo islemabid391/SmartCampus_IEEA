@@ -1,11 +1,12 @@
-"""Alimente la base avec des données de démonstration (idempotent).
+"""Alimente la base avec les données du catalogue (réelles NAPU ou démo) et les comptes démo (idempotent).
 
 Usage (depuis le dossier backend/) :
-    python -m scripts.seed
+    python -m scripts.seed --source real
+    python -m scripts.seed --source demo
 
 Variable optionnelle : SEED_DEMO_PASSWORD (mot de passe des comptes de démo).
-Données fictives, à usage de développement uniquement.
 """
+import argparse
 import json
 import os
 import sys
@@ -25,6 +26,7 @@ from app.models.catalogue import (
 from app.models.utilisateur import Utilisateur
 
 SEED_DIR = Path(__file__).resolve().parent.parent / "seed"
+REAL_CATALOGUE_PATH = SEED_DIR / "real" / "catalogue_reel.json"
 DEFAULT_DEMO_PASSWORD = "DemoSmartCampus2026!"
 
 
@@ -58,15 +60,22 @@ def upsert(db, model, lookup: dict, values: dict | None = None):
     return obj
 
 
-def seed_matieres(db):
-    for m in load("matieres.json"):
-        upsert(db, Matiere, {"code": m["code"]},
-               {"nom": m["nom"], "description": m.get("description")})
+def seed_matieres_from_list(db, items: list[dict]):
+    for m in items:
+        upsert(
+            db, Matiere, {"code": m["code"]},
+            {"nom": m["nom"], "description": m.get("description")},
+        )
 
 
-def seed_catalogue(db):
-    data = load("catalogue.json")
+def seed_matieres(db, source: str, data: dict):
+    if "matieres" in data and isinstance(data["matieres"], list):
+        seed_matieres_from_list(db, data["matieres"])
+    elif (SEED_DIR / "matieres.json").exists():
+        seed_matieres_from_list(db, load("matieres.json"))
 
+
+def seed_catalogue(db, data: dict):
     etablissements = {}
     for e in data["etablissements"]:
         etablissements[e["code"]] = upsert(
@@ -83,6 +92,8 @@ def seed_catalogue(db):
             "modalites": f.get("modalites"), "langue": f.get("langue"),
             "description": f.get("description"), "debouches": f.get("debouches"),
             "statut_publication": f["statut_publication"],
+            "source_url": f.get("source_url"),
+            "date_collecte": to_datetime(f.get("date_collecte")),
         })
 
         specialites = {}
@@ -123,13 +134,13 @@ def seed_catalogue(db):
             )
 
         for t in f.get("tarifs", []):
+            devise = t.get("devise", "TND")
             upsert(
                 db, Tarif,
-                {"formation_id": formation.id, "valide_du": to_date(t["valide_du"])},
+                {"formation_id": formation.id, "devise": devise, "valide_du": to_date(t.get("valide_du"))},
                 {"frais_scolarite": to_decimal(t["frais_scolarite"]),
-                 "devise": t.get("devise", "TND"),
                  "modalites_paiement": t.get("modalites_paiement"),
-                 "statut_publication": t["statut_publication"],
+                 "statut_publication": t.get("statut_publication", "publie"),
                  "valide_au": to_date(t.get("valide_au"))},
             )
 
@@ -143,6 +154,8 @@ def seed_catalogue(db):
 
 
 def seed_utilisateurs(db):
+    if not (SEED_DIR / "users_demo.json").exists():
+        return
     password = os.environ.get("SEED_DEMO_PASSWORD", DEFAULT_DEMO_PASSWORD)
     etablissements = {e.code: e for e in db.scalars(select(Etablissement))}
 
@@ -163,28 +176,50 @@ def seed_utilisateurs(db):
                 values["date_consentement"] = datetime.now(timezone.utc)
             db.add(Utilisateur(email=u["email"],
                                mot_de_passe_hash=hash_password(password), **values))
-        else:  # le mot de passe existant n'est pas modifié
+        else:
             for key, val in values.items():
                 setattr(existing, key, val)
         db.flush()
 
 
+def parse_args():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--source", choices=["real", "demo"], default="demo")
+    return ap.parse_args()
+
+def to_datetime(value):
+    if not value:
+        return None
+    if isinstance(value, datetime):
+        return value
+    return datetime.fromisoformat(value)
+
 def main():
+    args = parse_args()
     env = getattr(settings, "APP_ENV", "development")
     if env == "production":
-        sys.exit("Refus : le seed de démonstration est interdit en production.")
+        sys.exit("Refus : le seed est interdit en production.")
+
+    if args.source == "real":
+        if not REAL_CATALOGUE_PATH.exists():
+            sys.exit(f"Fichier introuvable : {REAL_CATALOGUE_PATH}")
+        data = json.loads(REAL_CATALOGUE_PATH.read_text(encoding="utf-8"))
+        label = "données réelles NAPU (catalogue_reel.json)"
+    else:
+        data = load("catalogue.json")
+        label = "données de démonstration (catalogue.json)"
 
     with SessionLocal() as db:
         try:
-            seed_matieres(db)
-            seed_catalogue(db)
+            seed_matieres(db, args.source, data)
+            seed_catalogue(db, data)
             seed_utilisateurs(db)
             db.commit()
         except Exception:
             db.rollback()
             raise
 
-        print("Seed terminé (données fictives de démonstration) :")
+        print(f"Seed terminé ({label}) :")
         for model in (Etablissement, Formation, Specialite, Programme, Matiere,
                       ProgrammeMatiere, ConditionAdmission, Tarif, Passerelle, Utilisateur):
             n = db.scalar(select(func.count()).select_from(model))

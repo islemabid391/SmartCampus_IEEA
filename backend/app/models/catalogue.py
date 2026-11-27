@@ -1,10 +1,11 @@
 
-from datetime import date
+from datetime import date, datetime
 from decimal import Decimal
 
 from sqlalchemy import (
     CheckConstraint,
     Date,
+    DateTime,
     ForeignKey,
     Numeric,
     String,
@@ -60,6 +61,8 @@ class Formation(TimestampMixin, Base):
         String(20),
         server_default="brouillon",
     )
+    source_url: Mapped[str | None] = mapped_column(String(500))
+    date_collecte: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
 class Specialite(Base):
