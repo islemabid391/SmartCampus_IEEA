@@ -5,14 +5,13 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Quelles sont les conditions d'admission à la Licence en Informatique de l'IIT ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
-    "reponse_attendue": "Baccalauréat (maths, sciences expérimentales, sciences techniques ou informatique), moyenne minimale de 10, étude du dossier et entretien de motivation.",
+    "question": "Quelles sont les conditions d'admission au Cycle Préparatoire Intégré de l'IIT ?",
+    "contexte": "Cycle Préparatoire Intégré (IIT, 2 ans). Conditions d'admission : accessible aux titulaires du Baccalauréat scientifique ou technique (Mathématiques, Sciences Expérimentales, Sciences Techniques, Sciences de l'Informatique). Frais affichés : 5800 TND (5800DT/2900€, période non précisée sur la fiche).",
+    "reponse_attendue": "Accessible aux titulaires d'un baccalauréat scientifique ou technique (Mathématiques, Sciences Expérimentales, Sciences Techniques, Sciences de l'Informatique).",
     "comportement_attendu": "repondre",
     "mots_cles": [
       "baccalauréat|bac",
-      "10",
-      "entretien"
+      "scientifique|technique"
     ],
     "mots_interdits": []
   },
@@ -22,12 +21,12 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Combien coûtent les frais de scolarité du cycle ingénieur en informatique ?",
-    "contexte": "Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "6500 TND en 4 tranches annuelles.",
+    "question": "Quel est le tarif affiché pour le Cycle Préparatoire Intégré de l'IIT ?",
+    "contexte": "Cycle Préparatoire Intégré (IIT, 2 ans). Tarif : frais_scolarite 5800.0 TND ; modalites_paiement : Montant affiché sur le site : 5800DT/2900€ (soit 2900 €) ; période non précisée sur la fiche (à vérifier selon l'année universitaire).",
+    "reponse_attendue": "5800 TND (5800DT/2900€, soit 2900 €), avec une période non précisée sur la fiche à vérifier selon l'année universitaire.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "6500"
+      "5800"
     ],
     "mots_interdits": []
   },
@@ -37,12 +36,14 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Quelle est la durée du cycle préparatoire intégré ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
-    "reponse_attendue": "Deux ans.",
+    "question": "En quelle langue est enseignée la Licence en Administration des Affaires à l'ISB et quelles sont les exigences d'admission ?",
+    "contexte": "Licence en Administration des Affaires (Business Administration) (ISB, 3 ans, langue : Anglais). Conditions : avoir un diplôme d'études secondaires (baccalauréat), de bons résultats aux épreuves d'anglais et de mathématiques au baccalauréat et un bon niveau dans ces deux domaines (tous les cours du programme sont enseignés en anglais). Admission soumise à l'approbation de la Commission d'admission du programme de premier cycle.",
+    "reponse_attendue": "Elle est enseignée en anglais. L'admission requiert le baccalauréat, de bons résultats et un bon niveau en anglais et en mathématiques, ainsi que l'approbation de la Commission d'admission.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "(2|deux) ans"
+      "anglais",
+      "mathématiques|maths",
+      "commission"
     ],
     "mots_interdits": []
   },
@@ -52,13 +53,12 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Peut-on payer les frais de la Licence en Informatique en plusieurs fois ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
-    "reponse_attendue": "Oui, en 3 tranches : inscription, janvier et avril.",
+    "question": "Quelle est la durée du cursus d'architecture à l'ISA Sfax ?",
+    "contexte": "Cursus et Diplôme en Architecture - ISA Sfax (ISA, durée : 6 ans). Description : Cursus d'architecture à l'ISA Sfax étalé sur six (6) années réparties sur deux cycles d'études.",
+    "reponse_attendue": "Le cursus d'architecture à l'ISA Sfax dure 6 ans (six années réparties sur deux cycles d'études).",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "(3|trois) tranches",
-      "janvier"
+      "(6|six) ans"
     ],
     "mots_interdits": []
   },
@@ -67,13 +67,13 @@
     "categorie": "admission",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "facile",
-    "question": "Quelle moyenne faut-il au bac pour entrer en cycle préparatoire ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
-    "reponse_attendue": "Une moyenne générale minimale de 12 au baccalauréat.",
+    "difficulte": "moyenne",
+    "question": "Quelle est la durée des mastères à l'ISB et à l'IIT dans le catalogue ?",
+    "contexte": "Mastère en Industrie 4.0 (IIT-MASTER-IND40, IIT, durée : 2 ans) ; Mastère en Marketing Digital (ISB-MASTER-MMD, ISB, durée : 2 ans) ; Mastère Professionnel en Comptabilité (ISB-MASTER-MPC, ISB, durée : 2 ans).",
+    "reponse_attendue": "Les mastères répertoriés dans le catalogue (Industrie 4.0 à l'IIT, Marketing Digital et Comptabilité à l'ISB) ont une durée de 2 ans.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "12"
+      "(2|deux) ans"
     ],
     "mots_interdits": []
   },
@@ -82,14 +82,13 @@
     "categorie": "admission",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "moyenne",
-    "question": "Comment passer de la Licence en Informatique au cycle ingénieur ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Via la passerelle : licence validée avec une moyenne d'au moins 12 et entretien de validation ; admission ensuite par concours ou dossier.",
-    "comportement_attendu": "repondre",
+    "difficulte": "difficile",
+    "question": "Quelles sont les conditions d'admission et les frais d'inscription du Mastère en Marketing Digital à l'ISB ?",
+    "contexte": "Mastère en Marketing Digital (ISB-MASTER-MMD, ISB, durée : 2 ans). Aucune condition d'admission ni tarif n'est renseigné dans le catalogue.",
+    "reponse_attendue": "Indiquer que la formation dure 2 ans mais que les conditions d'admission et les frais d'inscription ne sont pas renseignés dans le catalogue, sans les inventer, et renvoyer vers l'ISB.",
+    "comportement_attendu": "reconnaitre_limite",
     "mots_cles": [
-      "12",
-      "entretien"
+      "ISB"
     ],
     "mots_interdits": []
   },
@@ -98,13 +97,13 @@
     "categorie": "admission",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "facile",
-    "question": "Quels bacheliers peuvent s'inscrire à la Licence en Business et Management de l'ISB ?",
-    "contexte": "Licence en Business et Management (ISB, 3 ans, présentiel, français). Admission : baccalauréat toutes sections et étude du dossier scolaire. Frais 2026-2027 : 4200 TND en 3 tranches annuelles (l'ancien tarif de 3900 TND, valable en 2025-2026, n'est plus valide). Spécialités : Marketing ; Finance. Débouchés : assistant de gestion, chargé marketing, poursuite en master.",
-    "reponse_attendue": "Toutes les sections du baccalauréat, après étude du dossier scolaire.",
-    "comportement_attendu": "repondre",
+    "difficulte": "difficile",
+    "question": "Quels sont les frais de scolarité du Diplôme National d'Ingénieur en Génie Informatique à l'IIT ?",
+    "contexte": "Diplôme National d'Ingénieur en Génie Informatique (IIT-ING-INFO, IIT, durée : 3 ans). Aucun tarif ni condition d'admission détaillée n'est renseigné sur cette fiche dans le catalogue.",
+    "reponse_attendue": "Signaler que la formation dure 3 ans mais que les frais de scolarité ne sont pas renseignés dans le catalogue pour cette filière, sans inventer de montant, et inviter à vérifier auprès de l'IIT.",
+    "comportement_attendu": "reconnaitre_limite",
     "mots_cles": [
-      "toutes (les )?sections"
+      "IIT"
     ],
     "mots_interdits": []
   },
@@ -114,42 +113,9 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "difficile",
-    "question": "Quel est le tarif de la Licence en Business et Management ?",
-    "contexte": "Licence en Business et Management (ISB, 3 ans, présentiel, français). Admission : baccalauréat toutes sections et étude du dossier scolaire. Frais 2026-2027 : 4200 TND en 3 tranches annuelles (l'ancien tarif de 3900 TND, valable en 2025-2026, n'est plus valide). Spécialités : Marketing ; Finance. Débouchés : assistant de gestion, chargé marketing, poursuite en master.",
-    "reponse_attendue": "4200 TND en 3 tranches annuelles pour 2026-2027. L'ancien tarif de 3900 TND est périmé et ne doit pas être donné comme actuel.",
-    "comportement_attendu": "repondre",
-    "mots_cles": [
-      "4200"
-    ],
-    "mots_interdits": [
-      "3900"
-    ]
-  },
-  {
-    "id": "ADM-009",
-    "categorie": "admission",
-    "groupe": null,
-    "langue": "fr",
-    "difficulte": "moyenne",
-    "question": "Comment entre-t-on en cycle ingénieur ?",
-    "contexte": "Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Avec une licence en informatique ou le cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine.",
-    "comportement_attendu": "repondre",
-    "mots_cles": [
-      "licence|préparatoire",
-      "concours|dossier"
-    ],
-    "mots_interdits": []
-  },
-  {
-    "id": "ADM-010",
-    "categorie": "admission",
-    "groupe": null,
-    "langue": "fr",
-    "difficulte": "difficile",
-    "question": "Quelle est la date limite de dépôt des dossiers de préinscription ?",
+    "question": "Quelle est la date limite de dépôt de dossier pour intégrer l'IIT ou l'ISB cette année ?",
     "contexte": null,
-    "reponse_attendue": "Aucune date n'est disponible : le modèle ne doit pas en inventer, il doit le signaler et renvoyer vers l'établissement ou une source officielle.",
+    "reponse_attendue": "Signaler que la date limite d'inscription n'est pas disponible dans les données, ne pas en inventer et orienter vers l'administration de l'établissement concerné.",
     "comportement_attendu": "reconnaitre_limite",
     "mots_cles": [],
     "mots_interdits": [
@@ -157,27 +123,14 @@
     ]
   },
   {
-    "id": "ADM-011",
+    "id": "ADM-009",
     "categorie": "admission",
     "groupe": null,
     "langue": "fr",
     "difficulte": "difficile",
-    "question": "Y a-t-il des bourses d'études à l'IIT ?",
+    "question": "Existe-t-il des bourses d'études ou des réductions tarifaires garanties à l'ISA Sfax ?",
     "contexte": null,
-    "reponse_attendue": "Information non disponible : le modèle ne doit pas affirmer l'existence ni le montant d'une bourse, et doit orienter vers l'administration.",
-    "comportement_attendu": "reconnaitre_limite",
-    "mots_cles": [],
-    "mots_interdits": []
-  },
-  {
-    "id": "ADM-012",
-    "categorie": "admission",
-    "groupe": null,
-    "langue": "fr",
-    "difficulte": "difficile",
-    "question": "Quelles sont les conditions d'admission au Master en Marketing digital de l'ISB ?",
-    "contexte": null,
-    "reponse_attendue": "Aucune information officielle publiée : le modèle ne doit pas présenter de conditions comme officielles et doit proposer de contacter l'ISB.",
+    "reponse_attendue": "Indiquer que l'information sur les bourses ou réductions n'est pas disponible dans le catalogue, ne rien affirmer ni chiffrer, et conseiller de contacter l'établissement.",
     "comportement_attendu": "reconnaitre_limite",
     "mots_cles": [],
     "mots_interdits": []
@@ -188,13 +141,13 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "moyenne",
-    "question": "J'aime les maths et l'informatique mais j'hésite entre le cycle préparatoire et la Licence en Informatique. Que me conseillez-vous ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement. Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
-    "reponse_attendue": "Comparer les deux parcours (prépa : 2 ans, accès à l'ingénieur ; licence : 3 ans, informatique généraliste, passerelle vers l'ingénieur), justifier, sans imposer de choix.",
+    "question": "Je m'intéresse particulièrement à la data science, au machine learning et à l'intelligence artificielle. Quelle formation de l'IIT me correspond ?",
+    "contexte": "Licence en informatique (IIT-LIC-INFO, 3 ans) : propose notamment la spécialité Big Data et Analyse de Données (programmation, data science, machine learning, cloud computing et intelligence artificielle appliquée). L'IIT propose également le Diplôme National d'Ingénieur en Génie Informatique (IIT-ING-INFO, 3 ans) et le Cycle Préparatoire Intégré (IIT-CYCLE-PREPA, 2 ans).",
+    "reponse_attendue": "Orienter vers la Licence en informatique (spécialité Big Data et Analyse de Données) et mentionner les filières ingénieur / cycle préparatoire de l'IIT selon le projet d'études, sans inventer de détails non fournis.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "prépa|préparatoire",
-      "licence"
+      "Big Data",
+      "informatique"
     ],
     "mots_interdits": []
   },
@@ -204,13 +157,13 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "moyenne",
-    "question": "Je veux devenir ingénieur en intelligence artificielle. Quel parcours choisir après le bac ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement. Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Proposer les voies vers le cycle ingénieur (prépa puis ingénieur, ou licence puis passerelle) et la spécialité GLID liée aux données.",
+    "question": "Je veux concevoir des objets connectés et travailler sur l'électronique embarquée. Que propose l'IIT ?",
+    "contexte": "Licence en informatique (IIT-LIC-INFO, 3 ans) : comprend la spécialité Systèmes Embarqués et Internet des Objets (IoT) (électronique, programmation embarquée, Internet des Objets, systèmes temps réel et intelligence artificielle embarquée). L'IIT propose aussi la Licence en Mécatronique et Systèmes Intelligents (3 ans) et le Mastère en Industrie 4.0 (2 ans).",
+    "reponse_attendue": "Recommander la Licence en informatique (spécialité Systèmes Embarqués et Internet des Objets / IoT), tout en signalant la Licence en Mécatronique et Systèmes Intelligents ou le Mastère en Industrie 4.0.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "ingénieur",
-      "préparatoire|licence"
+      "IoT|objets connectés|embarqu",
+      "IIT"
     ],
     "mots_interdits": []
   },
@@ -219,14 +172,15 @@
     "categorie": "orientation",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "facile",
-    "question": "Je suis plus intéressé par la gestion et le marketing que par l'informatique. Quelle formation me conviendrait ?",
-    "contexte": "Licence en Business et Management (ISB, 3 ans, présentiel, français). Admission : baccalauréat toutes sections et étude du dossier scolaire. Frais 2026-2027 : 4200 TND en 3 tranches annuelles (l'ancien tarif de 3900 TND, valable en 2025-2026, n'est plus valide). Spécialités : Marketing ; Finance. Débouchés : assistant de gestion, chargé marketing, poursuite en master.",
-    "reponse_attendue": "Recommander la Licence en Business et Management de l'ISB, avec la spécialité Marketing.",
+    "difficulte": "moyenne",
+    "question": "Je suis attiré par les énergies renouvelables et les systèmes électriques intelligents. Quelle licence existe à l'IIT ?",
+    "contexte": "Licence en Systèmes Électriques Intelligents et Énergies Renouvelables (IIT-LIC-SEIER, IIT, durée : 3 ans).",
+    "reponse_attendue": "Recommander la Licence en Systèmes Électriques Intelligents et Énergies Renouvelables à l'IIT (durée : 3 ans).",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "Business|Management",
-      "Marketing"
+      "Énergies Renouvelables",
+      "Systèmes Électriques Intelligents",
+      "IIT"
     ],
     "mots_interdits": []
   },
@@ -235,13 +189,15 @@
     "categorie": "orientation",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "moyenne",
-    "question": "J'ai un bac technique et je veux faire de la programmation. Quelles sont mes options ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
-    "reponse_attendue": "Le bac Sciences techniques est accepté en Licence en Informatique (moyenne 10) et au cycle préparatoire (moyenne 12).",
+    "difficulte": "facile",
+    "question": "Je souhaite me former au management, à la finance et à la gestion d'entreprise entièrement en anglais. Quelle formation me conseillez-vous ?",
+    "contexte": "Licence en Administration des Affaires (Business Administration) (ISB-LIC-LBA, ISB, 3 ans, langue : Anglais) : couvre le management, la finance, la comptabilité, le marketing, l'économie et le droit des affaires, avec tous les cours enseignés en anglais.",
+    "reponse_attendue": "Recommander la Licence en Administration des Affaires (Business Administration) à l'ISB, dispensée en 3 ans et enseignée en anglais.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "licence"
+      "Administration des Affaires|Business Administration",
+      "ISB",
+      "anglais"
     ],
     "mots_interdits": []
   },
@@ -251,13 +207,14 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "moyenne",
-    "question": "Quelle est la différence entre la spécialité GLID et Réseaux et Cybersécurité en cycle ingénieur ?",
-    "contexte": "Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "GLID : développement logiciel, données et aide à la décision ; Réseaux et Cybersécurité : architecture réseau et sécurité des systèmes.",
+    "question": "Je veux m'orienter vers la comptabilité ou le marketing digital après une licence. Quelles options existent à l'ISB ?",
+    "contexte": "L'ISB propose le Mastère Professionnel en Comptabilité (ISB-MASTER-MPC, 2 ans) et le Mastère en Marketing Digital (ISB-MASTER-MMD, 2 ans), ainsi que la Licence en Administration des Affaires (ISB-LIC-LBA, 3 ans) qui mentionne la poursuite d'études vers les mastères en comptabilité, finance ou marketing.",
+    "reponse_attendue": "Mentionner le Mastère Professionnel en Comptabilité et le Mastère en Marketing Digital à l'ISB (ainsi que la Licence en Administration des Affaires pour la poursuite d'études), en restant fidèle au catalogue.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "logiciel|données",
-      "réseau"
+      "Comptabilité",
+      "Marketing Digital",
+      "ISB"
     ],
     "mots_interdits": []
   },
@@ -266,13 +223,15 @@
     "categorie": "orientation",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "difficile",
-    "question": "Je ne suis pas très fort en maths. Est-ce que la Licence en Informatique me convient ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
-    "reponse_attendue": "Réponse nuancée : la licence est plus généraliste et moins exigeante en moyenne (10) que la prépa (12), mais comporte des maths ; ne pas promettre sans nuance.",
+    "difficulte": "moyenne",
+    "question": "J'aime le génie civil, la mécanique, les procédés ou le génie industriel à l'IIT. Quelles filières ingénieur existent ?",
+    "contexte": "Diplômes Nationaux d'Ingénieur à l'IIT (3 ans) : Génie Informatique (IIT-ING-INFO), Génie Civil (IIT-ING-CIVIL), Génie des Procédés (IIT-ING-PROCEDES), Génie Mécanique (IIT-ING-MECANIQUE) et Génie Industriel (IIT-ING-INDUSTRIEL).",
+    "reponse_attendue": "Citer les filières ingénieur correspondantes de l'IIT : Génie Civil, Génie Mécanique, Génie des Procédés et Génie Industriel (3 ans).",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "math"
+      "Génie Civil",
+      "Génie Mécanique",
+      "Génie Industriel"
     ],
     "mots_interdits": []
   },
@@ -282,13 +241,13 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "moyenne",
-    "question": "Je suis passionné par les données et la prédiction. Quel parcours me mène au métier de data scientist ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement. Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Cycle ingénieur, spécialité GLID (données, aide à la décision), accessible par la prépa ou la licence.",
+    "question": "Je m'intéresse à l'Industrie 4.0 et aux systèmes intelligents à l'IIT. Quelle formation existe ?",
+    "contexte": "L'IIT propose notamment le Mastère en Industrie 4.0 (IIT-MASTER-IND40, 2 ans), ainsi que la Licence en Mécatronique et Systèmes Intelligents (IIT-LIC-MECATRONIQUE, 3 ans) et la Licence en informatique (IIT-LIC-INFO, 3 ans).",
+    "reponse_attendue": "Mentionner le Mastère en Industrie 4.0 (2 ans) à l'IIT, ainsi que la Licence en Mécatronique et Systèmes Intelligents (3 ans).",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "GLID",
-      "ingénieur"
+      "Industrie 4.0",
+      "IIT"
     ],
     "mots_interdits": []
   },
@@ -297,45 +256,14 @@
     "categorie": "orientation",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "moyenne",
-    "question": "Je veux faire de l'ingénierie logicielle, mais avec une voie pratique et progressive. Que proposez-vous ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement. Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Présenter 2 à 3 parcours justifiés : licence puis passerelle vers l'ingénieur, ou prépa puis ingénieur ; expliquer avantages et prérequis.",
-    "comportement_attendu": "repondre",
-    "mots_cles": [
-      "licence",
-      "ingénieur"
-    ],
-    "mots_interdits": []
-  },
-  {
-    "id": "ORI-009",
-    "categorie": "orientation",
-    "groupe": null,
-    "langue": "fr",
-    "difficulte": "difficile",
-    "question": "Je veux travailler dans le marketing digital plus tard. Quelle licence choisir à l'ISB ?",
-    "contexte": "Licence en Business et Management (ISB, 3 ans, présentiel, français). Admission : baccalauréat toutes sections et étude du dossier scolaire. Frais 2026-2027 : 4200 TND en 3 tranches annuelles (l'ancien tarif de 3900 TND, valable en 2025-2026, n'est plus valide). Spécialités : Marketing ; Finance. Débouchés : assistant de gestion, chargé marketing, poursuite en master.",
-    "reponse_attendue": "Licence en Business et Management, spécialité Marketing ; ne pas présenter un master en marketing digital comme une formation officielle disponible.",
-    "comportement_attendu": "repondre",
-    "mots_cles": [
-      "Marketing"
-    ],
-    "mots_interdits": []
-  },
-  {
-    "id": "ORI-010",
-    "categorie": "orientation",
-    "groupe": null,
-    "langue": "fr",
     "difficulte": "facile",
-    "question": "Quels débouchés après la Licence en Informatique ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
-    "reponse_attendue": "Développeur, administrateur systèmes et réseaux, ou poursuite en cycle ingénieur ou en master.",
+    "question": "Je veux faire des études d'architecture. Quel établissement et quel cursus correspondent ?",
+    "contexte": "Cursus et Diplôme en Architecture - ISA Sfax (ISA-ARCHI-CURSUS, ISA, 6 ans).",
+    "reponse_attendue": "Recommander le Cursus et Diplôme en Architecture à l'ISA Sfax, d'une durée de 6 ans.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "développeur",
-      "réseaux"
+      "Architecture",
+      "ISA"
     ],
     "mots_interdits": []
   },
@@ -345,12 +273,12 @@
     "groupe": "G-REF-01",
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Combien je dois payer pour la Licence en Informatique ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
-    "reponse_attendue": "4800 TND en 3 tranches (inscription, janvier, avril).",
+    "question": "Combien d'années dure le Cycle Préparatoire Intégré à l'IIT ?",
+    "contexte": "Cycle Préparatoire Intégré (IIT-CYCLE-PREPA, IIT) : durée de 2 ans.",
+    "reponse_attendue": "2 ans.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "4800"
+      "(2|deux) ans"
     ],
     "mots_interdits": []
   },
@@ -360,12 +288,12 @@
     "groupe": "G-REF-01",
     "langue": "fr",
     "difficulte": "facile",
-    "question": "c'est combien la licence info ??",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
-    "reponse_attendue": "4800 TND en 3 tranches (inscription, janvier, avril).",
+    "question": "la prepa integree a l'iit ca dure cb d'annees ?",
+    "contexte": "Cycle Préparatoire Intégré (IIT-CYCLE-PREPA, IIT) : durée de 2 ans.",
+    "reponse_attendue": "2 ans.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "4800"
+      "(2|deux) ans"
     ],
     "mots_interdits": []
   },
@@ -375,12 +303,12 @@
     "groupe": "G-REF-01",
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Quel est le prix de l'inscription en licence d'informatique à l'IIT ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation.",
-    "reponse_attendue": "4800 TND en 3 tranches (inscription, janvier, avril).",
+    "question": "Quelle est la durée totale du cycle préparatoire intégré de l'IIT ?",
+    "contexte": "Cycle Préparatoire Intégré (IIT-CYCLE-PREPA, IIT) : durée de 2 ans.",
+    "reponse_attendue": "2 ans.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "4800"
+      "(2|deux) ans"
     ],
     "mots_interdits": []
   },
@@ -390,12 +318,15 @@
     "groupe": "G-REF-02",
     "langue": "fr",
     "difficulte": "moyenne",
-    "question": "Qui peut s'inscrire au cycle préparatoire intégré ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
-    "reponse_attendue": "Bac scientifique (maths, sciences expérimentales ou techniques) avec une moyenne d'au moins 12.",
+    "question": "Quelles sont les spécialités de la Licence en informatique à l'IIT ?",
+    "contexte": "Licence en informatique (IIT-LIC-INFO, IIT, 3 ans) : Génie Logiciel et Systèmes Intelligents ; Big Data et Analyse de Données ; Réseaux et Cybersécurité ; Systèmes Embarqués et Internet des Objets (IoT).",
+    "reponse_attendue": "Génie Logiciel et Systèmes Intelligents, Big Data et Analyse de Données, Réseaux et Cybersécurité, et Systèmes Embarqués et Internet des Objets (IoT).",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "12"
+      "Génie Logiciel",
+      "Big Data",
+      "Cybersécurité",
+      "IoT|Objets"
     ],
     "mots_interdits": []
   },
@@ -405,12 +336,15 @@
     "groupe": "G-REF-02",
     "langue": "fr",
     "difficulte": "moyenne",
-    "question": "Je suis en bac sciences expérimentales, est-ce que je peux faire la prépa ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
-    "reponse_attendue": "Bac scientifique (maths, sciences expérimentales ou techniques) avec une moyenne d'au moins 12.",
+    "question": "y a quoi comme specialites en licence info a l'iit ?",
+    "contexte": "Licence en informatique (IIT-LIC-INFO, IIT, 3 ans) : Génie Logiciel et Systèmes Intelligents ; Big Data et Analyse de Données ; Réseaux et Cybersécurité ; Systèmes Embarqués et Internet des Objets (IoT).",
+    "reponse_attendue": "Génie Logiciel et Systèmes Intelligents, Big Data et Analyse de Données, Réseaux et Cybersécurité, et Systèmes Embarqués et Internet des Objets (IoT).",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "12"
+      "Génie Logiciel",
+      "Big Data",
+      "Cybersécurité",
+      "IoT|Objets"
     ],
     "mots_interdits": []
   },
@@ -420,12 +354,15 @@
     "groupe": "G-REF-02",
     "langue": "fr",
     "difficulte": "moyenne",
-    "question": "Quelles sont les conditions pour intégrer la prépa ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement.",
-    "reponse_attendue": "Bac scientifique (maths, sciences expérimentales ou techniques) avec une moyenne d'au moins 12.",
+    "question": "Quels parcours spécialisés propose la Licence en informatique de l'IIT ?",
+    "contexte": "Licence en informatique (IIT-LIC-INFO, IIT, 3 ans) : Génie Logiciel et Systèmes Intelligents ; Big Data et Analyse de Données ; Réseaux et Cybersécurité ; Systèmes Embarqués et Internet des Objets (IoT).",
+    "reponse_attendue": "Génie Logiciel et Systèmes Intelligents, Big Data et Analyse de Données, Réseaux et Cybersécurité, et Systèmes Embarqués et Internet des Objets (IoT).",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "12"
+      "Génie Logiciel",
+      "Big Data",
+      "Cybersécurité",
+      "IoT|Objets"
     ],
     "mots_interdits": []
   },
@@ -435,12 +372,12 @@
     "groupe": "G-REF-03",
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Combien d'années dure le cycle ingénieur ?",
-    "contexte": "Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Trois ans.",
+    "question": "En quelle langue se fait la Licence en Administration des Affaires à l'ISB ?",
+    "contexte": "Licence en Administration des Affaires (Business Administration) (ISB-LIC-LBA, ISB, 3 ans) : tous les cours du programme sont enseignés en anglais.",
+    "reponse_attendue": "En anglais.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "(3|trois) ans"
+      "anglais"
     ],
     "mots_interdits": []
   },
@@ -450,27 +387,42 @@
     "groupe": "G-REF-03",
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Le cycle ingénieur, c'est sur combien de temps ?",
-    "contexte": "Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Trois ans.",
+    "question": "les cours de business administration a l'isb c'est en quelle langue ?",
+    "contexte": "Licence en Administration des Affaires (Business Administration) (ISB-LIC-LBA, ISB, 3 ans) : tous les cours du programme sont enseignés en anglais.",
+    "reponse_attendue": "En anglais.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "(3|trois) ans"
+      "anglais"
     ],
     "mots_interdits": []
   },
   {
     "id": "REF-09",
     "categorie": "reformulation",
-    "groupe": "G-REF-03",
+    "groupe": "G-REF-04",
     "langue": "fr",
     "difficulte": "facile",
-    "question": "Je voudrais connaître la durée des études d'ingénieur en informatique à l'IIT.",
-    "contexte": "Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Trois ans.",
+    "question": "Combien d'années dure le cursus d'architecture à l'ISA Sfax ?",
+    "contexte": "Cursus et Diplôme en Architecture - ISA Sfax (ISA-ARCHI-CURSUS, ISA) : étalé sur six (6) années réparties sur deux cycles d'études.",
+    "reponse_attendue": "6 ans.",
     "comportement_attendu": "repondre",
     "mots_cles": [
-      "(3|trois) ans"
+      "(6|six) ans"
+    ],
+    "mots_interdits": []
+  },
+  {
+    "id": "REF-10",
+    "categorie": "reformulation",
+    "groupe": "G-REF-04",
+    "langue": "fr",
+    "difficulte": "facile",
+    "question": "l'architecture a l'isa sfax ca prend cb de temps ?",
+    "contexte": "Cursus et Diplôme en Architecture - ISA Sfax (ISA-ARCHI-CURSUS, ISA) : étalé sur six (6) années réparties sur deux cycles d'études.",
+    "reponse_attendue": "6 ans.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "(6|six) ans"
     ],
     "mots_interdits": []
   },
@@ -479,12 +431,15 @@
     "categorie": "ambigu",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "facile",
-    "question": "Je veux m'inscrire.",
-    "contexte": null,
-    "reponse_attendue": "Demande trop vague : demander quelle formation et à quel établissement avant de lancer toute démarche.",
-    "comportement_attendu": "demander_precision",
-    "mots_cles": [],
+    "difficulte": "moyenne",
+    "question": "Je veux faire de l'informatique à l'IIT, vous pouvez m'inscrire ?",
+    "contexte": "À l'IIT, l'informatique recouvre notamment la Licence en informatique (3 ans) et le Diplôme National d'Ingénieur en Génie Informatique (3 ans), ainsi que le Cycle Préparatoire Intégré (2 ans). Les modalités exactes d'inscription/préinscription ne sont pas toutes détaillées dans le catalogue.",
+    "reponse_attendue": "Distinguer les formations d'informatique à l'IIT (Licence en informatique, Diplôme National d'Ingénieur en Génie Informatique), demander de préciser le parcours souhaité et indiquer que l'assistant ne réalise pas l'inscription directement.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "Licence en informatique",
+      "Génie Informatique"
+    ],
     "mots_interdits": []
   },
   {
@@ -492,27 +447,31 @@
     "categorie": "ambigu",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "facile",
-    "question": "C'est combien ?",
-    "contexte": null,
-    "reponse_attendue": "Aucun objet précisé : demander de quelle formation il s'agit, sans inventer de montant.",
-    "comportement_attendu": "demander_precision",
-    "mots_cles": [],
-    "mots_interdits": [
-      "\\d+\\s*(TND|dinars)"
-    ]
+    "difficulte": "moyenne",
+    "question": "Je veux faire un mastère, lequel est le mieux ?",
+    "contexte": "Le catalogue mentionne plusieurs mastères de 2 ans selon l'établissement et le domaine : Mastère en Industrie 4.0 à l'IIT, Mastère en Marketing Digital à l'ISB et Mastère Professionnel en Comptabilité à l'ISB.",
+    "reponse_attendue": "Expliquer qu'il n'y a pas un choix unique sans connaître le domaine visé, lister les mastères présents (Industrie 4.0 à l'IIT ; Marketing Digital et Comptabilité à l'ISB) et demander de préciser l'objectif.",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "Industrie 4.0",
+      "Marketing Digital",
+      "Comptabilité"
+    ],
+    "mots_interdits": []
   },
   {
     "id": "AMB-003",
     "categorie": "ambigu",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "moyenne",
-    "question": "Quelle est la meilleure formation ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement. Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité. Licence en Business et Management (ISB, 3 ans, présentiel, français). Admission : baccalauréat toutes sections et étude du dossier scolaire. Frais 2026-2027 : 4200 TND en 3 tranches annuelles (l'ancien tarif de 3900 TND, valable en 2025-2026, n'est plus valide). Spécialités : Marketing ; Finance. Débouchés : assistant de gestion, chargé marketing, poursuite en master.",
-    "reponse_attendue": "Ne pas imposer un choix : expliquer que cela dépend du profil et poser des questions sur les intérêts, le niveau et le projet.",
-    "comportement_attendu": "demander_precision",
-    "mots_cles": [],
+    "difficulte": "difficile",
+    "question": "Combien ça coûte pour étudier une licence ?",
+    "contexte": "Le catalogue comporte plusieurs licences de 3 ans sur des établissements différents (Licence en informatique, Licence en Systèmes Électriques Intelligents et Énergies Renouvelables, Licence en Mécatronique et Systèmes Intelligents à l'IIT ; Licence en Administration des Affaires à l'ISB), mais les frais de scolarité ne sont pas renseignés pour toutes ces licences dans le catalogue.",
+    "reponse_attendue": "Signaler que la question est ambiguë car plusieurs licences existent (IIT et ISB) et que les tarifs des licences ne sont pas tous renseignés dans le catalogue, sans inventer de montant.",
+    "comportement_attendu": "reconnaitre_limite",
+    "mots_cles": [
+      "licence"
+    ],
     "mots_interdits": []
   },
   {
@@ -520,12 +479,16 @@
     "categorie": "ambigu",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "facile",
-    "question": "Est-ce que c'est difficile ?",
-    "contexte": null,
-    "reponse_attendue": "Question sans sujet : demander de quelle formation ou matière il s'agit.",
-    "comportement_attendu": "demander_precision",
-    "mots_cles": [],
+    "difficulte": "moyenne",
+    "question": "Est-ce que la formation dure 3 ans ?",
+    "contexte": "La question ne précise pas de quelle formation il s'agit : la plupart des licences et diplômes d'ingénieur durent 3 ans, mais le Cycle Préparatoire Intégré et les mastères durent 2 ans, et le cursus d'architecture à l'ISA Sfax dure 6 ans.",
+    "reponse_attendue": "Demander de préciser la formation concernée tout en rappelant que les durées varient selon le cursus (ex. 3 ans pour les licences et diplômes d'ingénieur, 2 ans pour la prépa intégrée ou les mastères, 6 ans pour l'architecture à l'ISA).",
+    "comportement_attendu": "repondre",
+    "mots_cles": [
+      "3 ans",
+      "2 ans",
+      "6 ans"
+    ],
     "mots_interdits": []
   },
   {
@@ -534,13 +497,14 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "moyenne",
-    "question": "Je veux faire de l'informatique, qu'est-ce que vous avez ?",
-    "contexte": "Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement. Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle ingénieur en informatique (IIT, 3 ans). Admission : licence en informatique ou réussite du cycle préparatoire, puis concours d'accès (épreuves écrites) ou étude de dossier selon la filière d'origine. Frais 2026-2027 : 6500 TND en 4 tranches annuelles. Spécialités de 3ème année : GLID (Génie Logiciel et Informatique Décisionnelle : développement logiciel, données et aide à la décision) ; Réseaux et Cybersécurité (architecture réseau et sécurité des systèmes). Débouchés : ingénieur logiciel, data scientist, ingénieur IA, architecte réseaux et sécurité.",
-    "reponse_attendue": "Présenter brièvement les parcours informatiques (licence, prépa, ingénieur) puis poser une question pour affiner (niveau, bac, projet).",
-    "comportement_attendu": "repondre_et_preciser",
+    "question": "Je veux faire une licence à l'IIT, laquelle choisir ?",
+    "contexte": "L'IIT propose plusieurs licences de 3 ans : Licence en informatique, Licence en Systèmes Électriques Intelligents et Énergies Renouvelables, et Licence en Mécatronique et Systèmes Intelligents.",
+    "reponse_attendue": "Lister les trois licences de l'IIT (informatique, Systèmes Électriques Intelligents et Énergies Renouvelables, Mécatronique et Systèmes Intelligents) et demander de préciser le domaine d'intérêt.",
+    "comportement_attendu": "repondre",
     "mots_cles": [
-      "licence",
-      "ingénieur|préparatoire"
+      "informatique",
+      "Énergies Renouvelables",
+      "Mécatronique"
     ],
     "mots_interdits": []
   },
@@ -549,13 +513,13 @@
     "categorie": "ambigu",
     "groupe": null,
     "langue": "fr",
-    "difficulte": "difficile",
-    "question": "Quelle est la durée de la licence ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Licence en Business et Management (ISB, 3 ans, présentiel, français). Admission : baccalauréat toutes sections et étude du dossier scolaire. Frais 2026-2027 : 4200 TND en 3 tranches annuelles (l'ancien tarif de 3900 TND, valable en 2025-2026, n'est plus valide). Spécialités : Marketing ; Finance. Débouchés : assistant de gestion, chargé marketing, poursuite en master.",
-    "reponse_attendue": "Deux licences existent (IIT Informatique et ISB Business) : elles durent toutes deux 3 ans ; préciser ou demander laquelle.",
-    "comportement_attendu": "repondre_et_preciser",
+    "difficulte": "moyenne",
+    "question": "Je cherche une formation en gestion ou commerce, c'est à l'IIT ou à l'ISB ?",
+    "contexte": "Les formations en gestion, administration des affaires, comptabilité et marketing digital (Licence en Administration des Affaires, Mastère Professionnel en Comptabilité, Mastère en Marketing Digital) relèvent de l'ISB.",
+    "reponse_attendue": "Préciser que les formations de gestion/commerce/comptabilité/marketing digital du catalogue sont à l'ISB (et non à l'IIT) et demander de préciser le niveau (licence ou mastère).",
+    "comportement_attendu": "repondre",
     "mots_cles": [
-      "(3|trois) ans"
+      "ISB"
     ],
     "mots_interdits": []
   },
@@ -565,40 +529,12 @@
     "groupe": null,
     "langue": "fr",
     "difficulte": "difficile",
-    "question": "Combien coûte la licence ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Licence en Business et Management (ISB, 3 ans, présentiel, français). Admission : baccalauréat toutes sections et étude du dossier scolaire. Frais 2026-2027 : 4200 TND en 3 tranches annuelles (l'ancien tarif de 3900 TND, valable en 2025-2026, n'est plus valide). Spécialités : Marketing ; Finance. Débouchés : assistant de gestion, chargé marketing, poursuite en master.",
-    "reponse_attendue": "Ambigu : 4800 TND pour la Licence en Informatique (IIT) et 4200 TND pour la Licence en Business et Management (ISB). Demander laquelle ou donner les deux en les attribuant correctement ; ne jamais donner 3900.",
-    "comportement_attendu": "repondre_et_preciser",
-    "mots_cles": [],
-    "mots_interdits": [
-      "3900"
-    ]
-  },
-  {
-    "id": "AMB-008",
-    "categorie": "ambigu",
-    "groupe": null,
-    "langue": "fr",
-    "difficulte": "difficile",
-    "question": "Je suis en troisième année, où puis-je m'inscrire ?",
-    "contexte": null,
-    "reponse_attendue": "Ne précise ni la filière ni le diplôme : demander dans quel cursus il est en troisième année et son projet.",
-    "comportement_attendu": "demander_precision",
-    "mots_cles": [],
-    "mots_interdits": []
-  },
-  {
-    "id": "AMB-009",
-    "categorie": "ambigu",
-    "groupe": null,
-    "langue": "fr",
-    "difficulte": "difficile",
-    "question": "J'ai 11 de moyenne au bac, je peux faire quoi ?",
-    "contexte": "Licence en Informatique (IIT, 3 ans, présentiel, français). Conditions d'admission : baccalauréat (sections Mathématiques, Sciences expérimentales, Sciences techniques ou Informatique) ; moyenne générale minimale au baccalauréat : 10 ; étude du dossier scolaire et entretien de motivation. Frais de scolarité 2026-2027 : 4800 TND, payables en 3 tranches (inscription, janvier, avril). Spécialités : Développement des Systèmes d'Information ; Réseaux et Systèmes. Débouchés : développeur, administrateur systèmes et réseaux, poursuite en cycle ingénieur ou en master. Passerelle vers le cycle ingénieur en informatique : licence validée avec une moyenne d'au moins 12 et entretien de validation. Cycle préparatoire intégré (IIT, 2 ans). Conditions : baccalauréat scientifique (Mathématiques, Sciences expérimentales ou Sciences techniques) ; moyenne générale minimale au baccalauréat : 12. Frais de scolarité 2026-2027 : 5200 TND en 3 tranches annuelles. Débouché : accès au cycle ingénieur de l'IIT après réussite des deux années et classement. Licence en Business et Management (ISB, 3 ans, présentiel, français). Admission : baccalauréat toutes sections et étude du dossier scolaire. Frais 2026-2027 : 4200 TND en 3 tranches annuelles (l'ancien tarif de 3900 TND, valable en 2025-2026, n'est plus valide). Spécialités : Marketing ; Finance. Débouchés : assistant de gestion, chargé marketing, poursuite en master.",
-    "reponse_attendue": "Moyenne 11 : Licence en Informatique possible (minimum 10, selon la section), Licence ISB sur dossier ; prépa non accessible (minimum 12). Demander la section du bac.",
-    "comportement_attendu": "repondre_et_preciser",
+    "question": "Est-ce que le programme est en français ou en anglais ?",
+    "contexte": "La langue d'enseignement n'est pas précisée sur toutes les fiches du catalogue ; la Licence en Administration des Affaires à l'ISB est explicitement enseignée en anglais.",
+    "reponse_attendue": "Demander de préciser la formation concernée, indiquer que la Licence en Administration des Affaires à l'ISB est enseignée en anglais, et signaler que la langue n'est pas précisée sur toutes les autres fiches.",
+    "comportement_attendu": "reconnaitre_limite",
     "mots_cles": [
-      "licence"
+      "anglais"
     ],
     "mots_interdits": []
   }
