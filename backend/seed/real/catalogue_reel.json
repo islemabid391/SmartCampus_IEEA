@@ -1,0 +1,889 @@
+{
+  "meta": {
+    "genere_le": "2026-11-27",
+    "sources": [
+      "https://iit.tn/filieres-ingenieur/cycle-preparatoire/",
+      "https://iit.tn/filieres-ingenieur/genie-civil/",
+      "https://iit.tn/filieres-ingenieur/genie-industriel-2/",
+      "https://iit.tn/filieres-ingenieur/genie-informatique-2/",
+      "https://iit.tn/filieres-ingenieur/genie-mecanique-2/",
+      "https://iit.tn/genie-des-procedes/",
+      "https://iit.tn/licence-en-mecatronique-systemes-intelligents/",
+      "https://iit.tn/licence-en-systemes-electriques-intelligents-energies-renouvelables/",
+      "https://iit.tn/licences/",
+      "https://iit.tn/mastere/",
+      "https://isa.tn/formation-en-architecture-en-tunisie-cursus-diplome-isa-sfax/",
+      "https://isb.tn/mmd/",
+      "https://isb.tn/program-mpc/",
+      "https://isb.tn/programme-lba/"
+    ],
+    "avertissement": "Données collectées sur les sites publics puis validées manuellement."
+  },
+  "etablissements": [
+    {
+      "code": "IIT",
+      "nom": "Institut International de Technologie",
+      "description": "Données issues du site officiel (https://iit.tn)."
+    },
+    {
+      "code": "ISB",
+      "nom": "International School of Business",
+      "description": "Données issues du site officiel (https://isb.tn)."
+    },
+    {
+      "code": "ISA",
+      "nom": "International School of Architecture",
+      "description": "Données issues du site officiel (https://isa.tn)."
+    }
+  ],
+  "matieres": [
+    {
+      "code": "BUSINESSECONOMICS",
+      "nom": "Business Economics",
+      "description": null
+    },
+    {
+      "code": "BUSINESSLAW",
+      "nom": "Business Law",
+      "description": null
+    },
+    {
+      "code": "BUSINESSSTRATEGYGAME",
+      "nom": "Business Strategy Games",
+      "description": null
+    },
+    {
+      "code": "COMPUTERSCIENCEI",
+      "nom": "Computer Science I",
+      "description": null
+    },
+    {
+      "code": "COMPUTERSCIENCEII",
+      "nom": "Computer Science II",
+      "description": null
+    },
+    {
+      "code": "DESCRIPTIVESTATISTIC",
+      "nom": "Descriptive Statistics and Probability",
+      "description": null
+    },
+    {
+      "code": "ENGLISH",
+      "nom": "English",
+      "description": null
+    },
+    {
+      "code": "FINANCIALACCOUNTING2",
+      "nom": "Financial Accounting 2",
+      "description": null
+    },
+    {
+      "code": "FINANCIALACCOUNTINGI",
+      "nom": "Financial Accounting I",
+      "description": null
+    },
+    {
+      "code": "FINANCIALDIAGNOSIS",
+      "nom": "Financial diagnosis",
+      "description": null
+    },
+    {
+      "code": "FINANCIALMATHEMATICS",
+      "nom": "Financial mathematics",
+      "description": null
+    },
+    {
+      "code": "FUNDAMENTALSOFHRM",
+      "nom": "Fundamentals of HRM",
+      "description": null
+    },
+    {
+      "code": "FUNDAMENTALSOFMANAGE",
+      "nom": "Fundamentals of Management",
+      "description": null
+    },
+    {
+      "code": "FUNDAMENTALSOFMARKET",
+      "nom": "Fundamentals of Marketing",
+      "description": null
+    },
+    {
+      "code": "INDUCTIVESTATISTICS",
+      "nom": "Inductive Statistics",
+      "description": null
+    },
+    {
+      "code": "INNOVATIONMANAGEMENT",
+      "nom": "Innovation Management and Entrepreneurship",
+      "description": null
+    },
+    {
+      "code": "INTERNSHIPDEFENSE",
+      "nom": "Internship Defense",
+      "description": null
+    },
+    {
+      "code": "INTRODUCTIONTOLAW",
+      "nom": "Introduction to law",
+      "description": null
+    },
+    {
+      "code": "KNOWLEDGEMANAGEMENT",
+      "nom": "Knowledge Management",
+      "description": null
+    },
+    {
+      "code": "LEADERSHIPETDIRECTIO",
+      "nom": "Leadership et Direction Skills",
+      "description": null
+    },
+    {
+      "code": "MACROECONOMICS",
+      "nom": "Macroeconomics",
+      "description": null
+    },
+    {
+      "code": "MANAGEMENTCONTROL",
+      "nom": "Management Control",
+      "description": null
+    },
+    {
+      "code": "MANAGEMENTOFDIGITALT",
+      "nom": "Management of digital transformation and MIS",
+      "description": null
+    },
+    {
+      "code": "MANAGEMENTSOFTWAREPA",
+      "nom": "Management software packages",
+      "description": null
+    },
+    {
+      "code": "MANAGERIALACCOUNTING",
+      "nom": "Managerial Accounting",
+      "description": null
+    },
+    {
+      "code": "MATHEMATICS2",
+      "nom": "Mathematics 2",
+      "description": null
+    },
+    {
+      "code": "MATHEMATICSI",
+      "nom": "Mathematics I",
+      "description": null
+    },
+    {
+      "code": "METHODOLOGYOFELABORA",
+      "nom": "Methodology of Elaboration of an Internship report",
+      "description": null
+    },
+    {
+      "code": "MICROECONOMICS",
+      "nom": "Microeconomics",
+      "description": null
+    },
+    {
+      "code": "OPERATIONSRESEARCH",
+      "nom": "Operations research",
+      "description": null
+    },
+    {
+      "code": "PERSONALDEVELOPMENTP",
+      "nom": "Personal Development Planning",
+      "description": null
+    },
+    {
+      "code": "PRACTICALACTIVITIES",
+      "nom": "Practical activities",
+      "description": null
+    },
+    {
+      "code": "PRINCIPLESOFMANAGEME",
+      "nom": "Principles of Management I",
+      "description": null
+    },
+    {
+      "code": "PRINCIPLESOFMANAGX8",
+      "nom": "Principles of Management 2",
+      "description": null
+    },
+    {
+      "code": "PRODUCTIONMANAGEMENT",
+      "nom": "Production Management",
+      "description": null
+    },
+    {
+      "code": "PROFESSIONALINTEGRAT",
+      "nom": "Professional Integration",
+      "description": null
+    },
+    {
+      "code": "PROJECTMANAGEMENT",
+      "nom": "Project Management",
+      "description": null
+    },
+    {
+      "code": "QUALITYMANAGEMENTAND",
+      "nom": "Quality Management and Certification",
+      "description": null
+    },
+    {
+      "code": "QUANTITATIVEANDQUALI",
+      "nom": "Quantitative and qualitative Analysis",
+      "description": null
+    },
+    {
+      "code": "STRATEGICMANAGEMENT",
+      "nom": "Strategic Management",
+      "description": null
+    },
+    {
+      "code": "TAXATION",
+      "nom": "Taxation",
+      "description": null
+    },
+    {
+      "code": "THEORYOFORGANIZATION",
+      "nom": "Theory of organizations",
+      "description": null
+    },
+    {
+      "code": "WORKLAW",
+      "nom": "Work Law",
+      "description": null
+    }
+  ],
+  "formations": [
+    {
+      "etablissement": "IIT",
+      "code": "IIT-LIC-INFO",
+      "nom": "Licence en informatique",
+      "cycle": "licence",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": null,
+      "description": "Licence en informatique à l'IIT (Sfax) déclinée en parcours spécialisés (génie logiciel, big data & IA, réseaux & cybersécurité, systèmes embarqués & IoT).",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/licences/",
+      "date_collecte": "2026-11-27",
+      "specialites": [
+        {
+          "nom": "Génie Logiciel et Systèmes Intelligents",
+          "description": "Cette licence prépare les étudiants à concevoir, développer, tester et déployer des applications logicielles modernes répondant aux besoins des entreprises. Elle couvre l’ensemble du cycle de développement logiciel en intégrant les technologies web, mobiles, cloud et les approches de développement intelligent."
+        },
+        {
+          "nom": "Big Data et Analyse de Données",
+          "description": "La Licence Big Data & Intelligence Artificielle forme des spécialistes capables de collecter, analyser et valoriser les données afin de développer des solutions d’intelligence artificielle répondant aux besoins des entreprises. La formation combine programmation, data science, machine learning, cloud computing et intelligence artificielle appliquée pour préparer les étudiants aux métiers de la transformation numérique."
+        },
+        {
+          "nom": "Réseaux et Cybersécurité",
+          "description": "La Licence Réseaux & Cybersécurité forme des experts capables de concevoir, administrer et sécuriser les infrastructures informatiques modernes. Les étudiants développent des compétences avancées en réseaux, cybersécurité, cloud computing et protection des systèmes d’information face aux cybermenaces"
+        },
+        {
+          "nom": "Systèmes Embarqués et Internet des Objets (IoT)",
+          "description": "Cette licence forme des ingénieurs techniciens spécialisés dans la conception de systèmes embarqués et d’objets connectés. Les étudiants acquièrent des compétences en électronique, programmation embarquée, Internet des Objets, systèmes temps réel et intelligence artificielle embarquée pour répondre aux besoins de l’Industrie 4.0."
+        }
+      ],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-CYCLE-PREPA",
+      "nom": "Cycle Préparatoire Intégré",
+      "cycle": "prepa",
+      "duree_annees": 2,
+      "modalites": null,
+      "langue": null,
+      "description": "Cycle préparatoire intégré de 2 ans à l'IIT (Sfax) préparant les bacheliers scientifiques et techniques à l'accès aux filières d'ingénieurs (Maths-Physique, Informatique, Technologie).",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/filieres-ingenieur/cycle-preparatoire/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [
+        {
+          "type": "diplome",
+          "description": "Accessible aux titulaires du Baccalauréat scientifique ou technique (Mathématiques, Sciences Expérimentales, Sciences Techniques, Sciences de l'Informatique).",
+          "niveau_requis": null,
+          "statut_publication": "publie"
+        }
+      ],
+      "tarifs": [
+        {
+          "frais_scolarite": 5800.0,
+          "devise": "TND",
+          "modalites_paiement": "Montant affiché sur le site : 5800DT/2900€ (soit 2900 €) ; période non précisée sur la fiche (à vérifier selon l'année universitaire).",
+          "statut_publication": "publie",
+          "valide_du": null,
+          "valide_au": null
+        }
+      ],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-LIC-SEIER",
+      "nom": "Licence en Systèmes Électriques Intelligents et Énergies Renouvelables",
+      "cycle": "licence",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": null,
+      "description": "La Licence en Systèmes Électriques Intelligents & Énergies Renouvelables forme des diplômés capables de concevoir, exploiter et maintenir les systèmes électriques modernes intégrant les technologies numériques et les énergies renouvelables.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/licence-en-systemes-electriques-intelligents-energies-renouvelables/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-LIC-MECATRONIQUE",
+      "nom": "Licence en Mécatronique et Systèmes Intelligents",
+      "cycle": "licence",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": null,
+      "description": "La Licence en Mécatronique & Systèmes Intelligents forme des spécialistes capables de concevoir, programmer, intégrer et maintenir des systèmes intelligents combinant mécanique, électronique, informatique industrielle et intelligence artificielle.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/licence-en-mecatronique-systemes-intelligents/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-ING-INFO",
+      "nom": "Diplôme National d'Ingénieur en Génie Informatique",
+      "cycle": "ingenieur",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": null,
+      "description": "Le Groupe Universitaire NAU propose un diplôme en Génie Informatique, autorisé par le Ministère de l’Enseignement Supérieur depuis 2012. Ce programme de Génie Informatique est accrédité depuis 2020 par l’agence allemande d’accréditation ASIIN, sous le label Euro-Inf – niveau Master.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/filieres-ingenieur/genie-informatique-2/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-ING-CIVIL",
+      "nom": "Diplôme National d'Ingénieur en Génie Civil",
+      "cycle": "ingenieur",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": null,
+      "description": "Le génie civil est l’ensemble des activités techniques nécessaires à la réalisation de constructions civiles.L’ingénieur civil s’occupe de la conception, de la construction, de la gestion, de l’entretien et de la réparation des ouvrages en domaine de bâtiments et travaux publics BTP.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/filieres-ingenieur/genie-civil/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-ING-PROCEDES",
+      "nom": "Diplôme National d'Ingénieur en Génie des Procédés",
+      "cycle": "ingenieur",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": null,
+      "description": "Le génie des procédés peut être définie comme la convergence de plusieurs disciplines qui combinent les connaissances et l’expertise nécessaires pour soutenir la transformation industrielle de matériaux bruts ou synthétiques en un ou plusieurs produits manufacturés en utilisant des opérations unitaires.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/genie-des-procedes/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-ING-MECANIQUE",
+      "nom": "Diplôme National d'Ingénieur en Génie Mécanique",
+      "cycle": "ingenieur",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": null,
+      "description": "Notre département de mécanique vise à fournir une formation de qualité, préparant nos étudiants à exceller dans l’ingénierie mécanique moderne. Nous concentrons notre enseignement sur l’acquisition de solides bases scientifiques, le développement de compétences techniques avancées et la promotion de la créativité. En encourageant le travail d’équipe et en mettant l’accent sur l’éthique professionnelle, nous préparons nos étudiants à des carrières réussies en tant qu’ingénieurs mécaniciens compétents et innovants.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/filieres-ingenieur/genie-mecanique-2/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-ING-INDUSTRIEL",
+      "nom": "Diplôme National d'Ingénieur en Génie Industriel",
+      "cycle": "ingenieur",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": null,
+      "description": "La formation en génie industriel vise à former des professionnels capables d’optimiser les processus et les systèmes industriels pour améliorer l’efficacité, la qualité, la productivité et la compétitivité des entreprises.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/filieres-ingenieur/genie-industriel-2/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "IIT",
+      "code": "IIT-MASTER-IND40",
+      "nom": "Mastère en Industrie 4.0",
+      "cycle": "autre",
+      "duree_annees": 2,
+      "modalites": null,
+      "langue": null,
+      "description": "L’objectif de ce mastère est de former des experts en informatique et en nouvelles technologies afin de pouvoir relever les nouveaux défis des générations actuelles et futures des usines dites les usines de futur.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://iit.tn/mastere/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "ISB",
+      "code": "ISB-LIC-LBA",
+      "nom": "Licence en Administration des Affaires (Business Administration)",
+      "cycle": "licence",
+      "duree_annees": 3,
+      "modalites": null,
+      "langue": "Anglais",
+      "description": "Licence en Administration des Affaires (Bachelor in Business Administration) de l'ISB Sfax, dispensée sur 3 ans (6 semestres) couvrant le management, la finance, la comptabilité, le marketing, l'économie et le droit des affaires.",
+      "debouches": "La “Licence en Administration des Affaires (en Anglais)” de l’ISB Sfax prépare les étudiants à l’emploi dans des entreprises ou des agences privées ou publiques. Les diplômés peuvent également devenir des entrepreneurs indépendants ou travailler dans des cabinets de conseils. Ils peuvent agir aussi bien localement qu’à l’échelle internationale. Perspectives professionnelles Voici quelques options de carrière pour ce diplômé : Chef d’entreprise (niveau local ou international) Gestionnaire Chef des opérations Consultant en gestion Gestionnaire de projet Opérateur indépendant d’entreprise En tant que diplômé du “Licence en Administration des Affaires (en Anglais)”, vous pouvez également poursuivre une carrière universitaire en vous inscrivant aux Mastères en comptabilité, en finance, en marke",
+      "statut_publication": "publie",
+      "source_url": "https://isb.tn/programme-lba/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [
+        {
+          "nom": "Licence en Administration des Affaires (Business Administration) - Semestre 1",
+          "annee_niveau": 1,
+          "matieres": [
+            {
+              "code": "PRINCIPLESOFMANAGEME",
+              "semestre": 1,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "FINANCIALACCOUNTINGI",
+              "semestre": 1,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "MICROECONOMICS",
+              "semestre": 1,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "MATHEMATICSI",
+              "semestre": 1,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "INTRODUCTIONTOLAW",
+              "semestre": 1,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "FINANCIALMATHEMATICS",
+              "semestre": 1,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "ENGLISH",
+              "semestre": 1,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "COMPUTERSCIENCEI",
+              "semestre": 1,
+              "credits": null,
+              "coefficient": null
+            }
+          ]
+        },
+        {
+          "nom": "Licence en Administration des Affaires (Business Administration) - Semestre 2",
+          "annee_niveau": 1,
+          "matieres": [
+            {
+              "code": "PRINCIPLESOFMANAGX8",
+              "semestre": 2,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "FINANCIALACCOUNTING2",
+              "semestre": 2,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "MATHEMATICS2",
+              "semestre": 2,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "DESCRIPTIVESTATISTIC",
+              "semestre": 2,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "MACROECONOMICS",
+              "semestre": 2,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "BUSINESSLAW",
+              "semestre": 2,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "ENGLISH",
+              "semestre": 2,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "COMPUTERSCIENCEII",
+              "semestre": 2,
+              "credits": null,
+              "coefficient": null
+            }
+          ]
+        },
+        {
+          "nom": "Licence en Administration des Affaires (Business Administration) - Semestre 3",
+          "annee_niveau": 2,
+          "matieres": [
+            {
+              "code": "FUNDAMENTALSOFMANAGE",
+              "semestre": 3,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "MANAGERIALACCOUNTING",
+              "semestre": 3,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "FUNDAMENTALSOFMARKET",
+              "semestre": 3,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "PRACTICALACTIVITIES",
+              "semestre": 3,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "ENGLISH",
+              "semestre": 3,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "PERSONALDEVELOPMENTP",
+              "semestre": 3,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "TAXATION",
+              "semestre": 3,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "INDUCTIVESTATISTICS",
+              "semestre": 3,
+              "credits": null,
+              "coefficient": null
+            }
+          ]
+        },
+        {
+          "nom": "Licence en Administration des Affaires (Business Administration) - Semestre 4",
+          "annee_niveau": 2,
+          "matieres": [
+            {
+              "code": "FUNDAMENTALSOFHRM",
+              "semestre": 4,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "FINANCIALDIAGNOSIS",
+              "semestre": 4,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "PRODUCTIONMANAGEMENT",
+              "semestre": 4,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "METHODOLOGYOFELABORA",
+              "semestre": 4,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "ENGLISH",
+              "semestre": 4,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "PROFESSIONALINTEGRAT",
+              "semestre": 4,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "OPERATIONSRESEARCH",
+              "semestre": 4,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "BUSINESSECONOMICS",
+              "semestre": 4,
+              "credits": null,
+              "coefficient": null
+            }
+          ]
+        },
+        {
+          "nom": "Licence en Administration des Affaires (Business Administration) - Semestre 5",
+          "annee_niveau": 3,
+          "matieres": [
+            {
+              "code": "THEORYOFORGANIZATION",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "QUANTITATIVEANDQUALI",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "PROJECTMANAGEMENT",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "QUALITYMANAGEMENTAND",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "INTERNSHIPDEFENSE",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "ENGLISH",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "LEADERSHIPETDIRECTIO",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "KNOWLEDGEMANAGEMENT",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "WORKLAW",
+              "semestre": 5,
+              "credits": null,
+              "coefficient": null
+            }
+          ]
+        },
+        {
+          "nom": "Licence en Administration des Affaires (Business Administration) - Semestre 6",
+          "annee_niveau": 3,
+          "matieres": [
+            {
+              "code": "INNOVATIONMANAGEMENT",
+              "semestre": 6,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "MANAGEMENTOFDIGITALT",
+              "semestre": 6,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "STRATEGICMANAGEMENT",
+              "semestre": 6,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "MANAGEMENTCONTROL",
+              "semestre": 6,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "ENGLISH",
+              "semestre": 6,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "MANAGEMENTSOFTWAREPA",
+              "semestre": 6,
+              "credits": null,
+              "coefficient": null
+            },
+            {
+              "code": "BUSINESSSTRATEGYGAME",
+              "semestre": 6,
+              "credits": null,
+              "coefficient": null
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "type": "diplome",
+          "description": "Pour pouvoir prendre part au programme du “Licence en Administration des Affaires (en Anglais)” de l’ISB, les candidats doivent répondre aux exigences minimales suivantes: Avoir un diplôme d’études secondaires (baccalauréat). De bons résultats aux épreuves d’anglais et de mathématiques au baccalauréat et un bon niveau dans ces deux domaines. (tous les cours du programme sont enseignés en anglais). L’admission de ce programme est soumise à l’approbation de la Commission d’admission du programme de premier cycle.",
+          "niveau_requis": null,
+          "statut_publication": "publie"
+        }
+      ],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "ISB",
+      "code": "ISB-MASTER-MMD",
+      "nom": "Mastère en Marketing Digital",
+      "cycle": "autre",
+      "duree_annees": 2,
+      "modalites": null,
+      "langue": null,
+      "description": "les étudiants du Master en Digital Marketing apprennent les atouts de ce métier auprès des connaisseurs du domaine. Pour ceci, les cours sont assurés par des experts qui exercent le métier du digital depuis des années.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://isb.tn/mmd/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "ISB",
+      "code": "ISB-MASTER-MPC",
+      "nom": "Mastère Professionnel en Comptabilité",
+      "cycle": "autre",
+      "duree_annees": 2,
+      "modalites": null,
+      "langue": null,
+      "description": "Mastère professionnel orienté comptabilité, finance et contrôle de gestion à l'ISB (à compléter/vérifier sur la page officielle car l'extrait initial contenait une description générique).",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://isb.tn/program-mpc/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    },
+    {
+      "etablissement": "ISA",
+      "code": "ISA-ARCHI-CURSUS",
+      "nom": "Cursus et Diplôme en Architecture - ISA Sfax",
+      "cycle": "autre",
+      "duree_annees": 6,
+      "modalites": null,
+      "langue": null,
+      "description": "Cursus d'architecture à l'ISA Sfax étalé sur six (6) années réparties sur deux cycles d'études.",
+      "debouches": null,
+      "statut_publication": "publie",
+      "source_url": "https://isa.tn/formation-en-architecture-en-tunisie-cursus-diplome-isa-sfax/",
+      "date_collecte": "2026-11-27",
+      "specialites": [],
+      "programmes": [],
+      "conditions": [],
+      "tarifs": [],
+      "passerelles": []
+    }
+  ]
+}

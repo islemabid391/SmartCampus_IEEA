@@ -1,0 +1,55 @@
+# SA-18 - Sources des données réelles (sites publics des établissements du groupement NAPU).
+# Règles : pages publiques uniquement, robots.txt respecté, une requête toutes les `delay_s` secondes,
+# aucune donnée personnelle collectée (on ne garde ni noms ni e-mails de personnes).
+user_agent: "SmartCampusAI-ProjetUniversitaire/1.0 (projet etudiant IIT ; contact: amal.regaig@iit.ens.tn)"
+delay_s: 2.0
+timeout_s: 25
+max_depth: 0          # 0 = seulement les URLs listées ; 1 = suit aussi les liens internes filtrés par include_patterns
+max_pages_per_site: 60
+
+etablissements:
+  IIT:
+    nom: "Institut International de Technologie"
+    base_url: "https://iit.tn"
+    start_urls:
+      - https://iit.tn/filieres-ingenieur/cycle-preparatoire/
+      - https://iit.tn/architecture-2/
+      - https://iit.tn/licences/
+      - https://iit.tn/licence-en-systemes-electriques-intelligents-energies-renouvelables/
+      - https://iit.tn/licence-en-mecatronique-systemes-intelligents/
+      - https://iit.tn/reseaux-et-cybersecurite/
+      - https://iit.tn/systemes-embarques-internet-des-objets-iot/
+      - https://iit.tn/big-data-et-analyse-de-donnees/
+      - https://iit.tn/genie-logiciel-systemes-intelligents/
+      - https://iit.tn/mastere/
+      - https://iit.tn/filieres-ingenieur/genie-civil/
+      - https://iit.tn/genie-des-procedes/
+      - https://iit.tn/filieres-ingenieur/genie-informatique-2/
+      - https://iit.tn/filieres-ingenieur/genie-mecanique-2/
+      - https://iit.tn/filieres-ingenieur/genie-industriel-2/
+      - https://iit.tn/test/procedure-et-frais-dinscription/
+      - https://iit.tn/test/bourse/
+    include_patterns: ["/filieres-ingenieur/", "/licence", "/mastere", "/genie-", "/test/"]
+    exclude_patterns: ["/wp-content/", "/wp-json/", "/tag/", "/category/", "/feed", "login.microsoftonline"]
+
+  ISB:
+    nom: "International School of Business"
+    base_url: "https://isb.tn"
+    start_urls:
+      - https://isb.tn/licences-program/
+      - https://isb.tn/programme-lba/
+      - https://isb.tn/program/
+      - https://isb.tn/mmd/
+      - https://isb.tn/program-mpc/
+    include_patterns: ["/licences-program/", "/programme-", "/program/", "/mmd/", "/program-"]
+    exclude_patterns: ["/wp-content/", "/wp-json/", "/tag/", "/category/", "/feed", "login.microsoftonline"]
+
+  ISA:
+    nom: "International School of Architecture"
+    base_url: "https://isa.tn"
+    start_urls:
+      - https://isa.tn/formations/
+      - https://isa.tn/formation-en-architecture-en-tunisie-cursus-diplome-isa-sfax/
+      - https://isa.tn/iit/
+    include_patterns: ["/formations/", "/formation-", "/architecture", "/iit/"]
+    exclude_patterns: ["/wp-content/", "/wp-json/", "/tag/", "/category/", "/feed", "login.microsoftonline"]
